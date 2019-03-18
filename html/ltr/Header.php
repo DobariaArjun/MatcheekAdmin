@@ -7,7 +7,7 @@
             </a>
             <a class="navbar-brand" href="Home.php">
                 <b class="logo-icon p-l-10">
-                    <img src="../../assets/images/logo/logo.png" alt="homepage" class="light-logo" />
+                    <img src="../../assets/images/logo/logoo.png" alt="homepage" class="light-logo" />
 
                 </b>
             </a>
