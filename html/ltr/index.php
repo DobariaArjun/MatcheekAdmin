@@ -21,7 +21,7 @@
             
             if(username =="admin" && password == "admin")
             {
-                window.location.href = "http://localhost/SweetLover/html/ltr/Home.php";
+                window.location.href = "http://13.58.244.164/SwitLoverAdmin/html/ltr/Home.php";
             }
             else{
                 alert("Username or Password is incorrect");
