@@ -11,6 +11,15 @@
         <title>SwitLover - Admin panel</title>
         <link href="../../assets/libs/flot/css/float-chart.css" rel="stylesheet">
         <link href="../../dist/css/style.min.css" rel="stylesheet">
+        <script type="text/javascript" >
+            function preventBack() {
+                window.history.forward();
+            }
+            setTimeout("preventBack()", 0);
+            window.onunload = function () {
+                null
+            };
+        </script> 
     </head>
 
     <body>
@@ -49,7 +58,7 @@
                                         <i class="mdi mdi-alert"></i>
                                     </h1>
                                     <h6 class="text-white">Total Not Yet Login User</h6>
-                                    <h5 class="text-white">2540</h5>
+                                    <h5 class="text-white">0</h5>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +70,7 @@
                                         <i class="mdi mdi-chart-areaspline"></i>
                                     </h1>
                                     <h6 class="text-white">Download Of Application Per Hour</h6>
-                                    <h5 class="text-white">2540</h5>
+                                    <h5 class="text-white">0</h5>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +80,7 @@
                                 <div class="box bg-warning text-center">
                                     <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
                                     <h6 class="text-white">Download Of Application Per Day</h6>
-                                    <h5 class="text-white">2540</h5>
+                                    <h5 class="text-white">0</h5>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +90,7 @@
                                 <div class="box bg-danger text-center">
                                     <h1 class="font-light text-white"><i class="fa fa-user m-b-5 font-22"></i></h1>
                                     <h6 class="text-white">Total Users</h6>
-                                    <h5 class="text-white">2540</h5>
+                                    <h5 class="text-white">0</h5>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +100,7 @@
                                 <div class="box bg-info text-center">
                                     <h1 class="font-light text-white"><i class="fa fa-user m-b-5 font-22"></i></h1>
                                     <h6 class="text-white">Online User</h6>
-                                    <h5 class="text-white">2540</h5>
+                                    <h5 class="text-white">0</h5>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +111,7 @@
                                 <div class="box bg-danger text-center">
                                     <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
                                     <h6 class="text-white">Average Time Spent on Application</h6>
-                                    <h5 class="text-white">2540</h5>
+                                    <h5 class="text-white">0</h5>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +121,7 @@
                                 <div class="box bg-info text-center">
                                     <h1 class="font-light text-white"><i class="mdi mdi-relative-scale"></i></h1>
                                     <h6 class="text-white">Access Application Per Day</h6>
-                                    <h5 class="text-white">2540</h5>
+                                    <h5 class="text-white">0</h5>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +131,7 @@
                                 <div class="box bg-cyan text-center">
                                     <h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1>
                                     <h6 class="text-white">Access Application Per Hour</h6>
-                                    <h5 class="text-white">2540</h5>
+                                    <h5 class="text-white">0</h5>
                                 </div>
                             </div>
                         </div>
@@ -134,12 +143,12 @@
             <?php include 'footer.php'; ?>
         </div>
 
-    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../../dist/js/custom.min.js"></script>
+        <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+        <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+        <script src="../../dist/js/custom.min.js"></script>
 
-</body>
+    </body>
 
 </html>
