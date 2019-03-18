@@ -52,7 +52,7 @@
                 <div id="loginform">
                     <div class="text-center p-t-20 p-b-20">
                         <span class="db">
-                            <img src="../../assets/images/logo/logo.png" alt="logo" /></span>
+                            <img src="../../assets/images/logo/logoo.png" alt="logo" /></span>
                     </div>
                     <!-- Form -->
                     <!--action="<?php //echo htmlspecialchars($_SERVER['PHP_SELF']);  ?>"-->
