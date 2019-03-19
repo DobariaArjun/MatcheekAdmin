@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/fevicon.png">
         <title>Matrix Template - The Ultimate Multipurpose admin template</title>
         <link rel="stylesheet" type="text/css" href="../../assets/extra-libs/multicheck/multicheck.css">
         <link href="../../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
