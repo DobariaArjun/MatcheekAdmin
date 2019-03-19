@@ -12,6 +12,16 @@
         <link rel="stylesheet" type="text/css" href="../../assets/extra-libs/multicheck/multicheck.css">
         <link href="../../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
         <link href="../../dist/css/style.min.css" rel="stylesheet">
+        
+        <script type="text/javascript" >
+            function preventBack() {
+                window.history.forward();
+            }
+            setTimeout("preventBack()", 0);
+            window.onunload = function () {
+                null
+            };
+        </script> 
     </head>
 
     <body>
