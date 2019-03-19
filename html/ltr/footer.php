@@ -1,3 +1,3 @@
 <footer class="footer text-center">
-    All Rights Reserved by SwitLover. Designed and Developed by <a href="#">SwitLover</a>.
+    All Rights Reserved by Matcheek. Designed and Developed by <a href="#">Matcheek</a>.
 </footer>
