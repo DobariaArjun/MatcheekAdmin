@@ -21,7 +21,15 @@
             
             if(username =="admin" && password == "admin")
             {
-                window.location.href = "http://13.58.244.164/SwitLoverAdmin/html/ltr/Home.php";
+                if (location.hostname === "ec2-13-58-244-164.us-east-2.compute.amazonaws.com" || location.hostname === "13.58.244.164")
+                {
+                    window.location.href = "http://13.58.244.164/SwitLoverAdmin/html/ltr/Home.php";
+                }
+                else
+                {
+                    window.location.href = "http://localhost/MatcheekAdmin/html/ltr/Home.php";
+                }
+                
             }
             else{
                 alert("Username or Password is incorrect");
