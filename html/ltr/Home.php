@@ -98,11 +98,11 @@
                                         <i class="mdi mdi-alert"></i>
                                     </h1>
                                     <h6 class="text-white">Total Not Yet Login User</h6>
-                                    <h5 class="text-white" onload="<?php
-                                        $get_data = callAPI('GET', 'https://switlover.herokuapp.com/api/count', false);
+                                    <h5 class="text-white"><?php
+                                        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/notloginyetcount', false);
                                         $response = json_decode($get_data, true);
-                                        echo $response;
-                                        ?>"></h5>
+                                        echo $response["userdata"];
+                                        ?></h5>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +134,11 @@
                                 <div class="box bg-danger text-center">
                                     <h1 class="font-light text-white"><i class="fa fa-user m-b-5 font-22"></i></h1>
                                     <h6 class="text-white">Total Users</h6>
-                                    <h5 class="text-white">0</h5>
+                                    <h5 class="text-white"><?php
+                                        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/count', false);
+                                        $response = json_decode($get_data, true);
+                                        echo $response["userdata"];
+                                        ?></h5>
                                 </div>
                             </div>
                         </div>
