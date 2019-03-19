@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="../../assets/extra-libs/multicheck/multicheck.css">
         <link href="../../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
         <link href="../../dist/css/style.min.css" rel="stylesheet">
-        
+
         <script type="text/javascript" >
             function preventBack() {
                 window.history.forward();
@@ -23,6 +23,46 @@
             };
         </script> 
     </head>
+
+    <?PHP
+
+    function callAPI($method, $url, $data) {
+        $curl = curl_init();
+
+        switch ($method) {
+            case "POST":
+                curl_setopt($curl, CURLOPT_POST, 1);
+                if ($data)
+                    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+                break;
+            case "PUT":
+                curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
+                if ($data)
+                    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+                break;
+            default:
+                if ($data)
+                    $url = sprintf("%s?%s", $url, http_build_query($data));
+        }
+
+        // OPTIONS:
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+            'APIKEY: 111111111111111111111',
+            'Content-Type: application/json',
+        ));
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+
+        // EXECUTE:
+        $result = curl_exec($curl);
+        if (!$result) {
+            die("Connection Failure");
+        }
+        curl_close($curl);
+        return $result;
+    }
+    ?>
 
     <body>
         <div class="preloader">
@@ -52,7 +92,7 @@
                                     <h5 class="card-title">User List</h5>
                                     <div class="table-responsive">
                                         <table id="zero_config" class="table table-striped table-bordered">
-                                            <thead>
+                                            <thead style="background-color: skyblue;">
                                                 <tr>
                                                     <th>Name</th>
                                                     <th>Phone number</th>
@@ -65,55 +105,55 @@
                                                     <th>isBlock</th>
                                                     <th>isOnline</th>
                                                     <th>isDeleted</th>
-                                                    
+
                                                 </tr>
                                             </thead>
+                                            <?php
+                                            $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/allUser', false);
+                                            $response = json_decode($get_data, true);
+                                            //echo $response["userdata"];
+                                            ?>
                                             <tbody>
-                                                <tr>
-                                                    <td>Tiger Nixon</td>
-                                                    <td>System Architect</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>61</td>
-                                                    <td>2011/04/25</td>
-                                                    <td>$320,800</td>
-                                                    <td>2011/04/25</td>
-                                                    <td>$320,800</td>
-                                                    <td>No</td>
-                                                    <td>No</td>
-                                                    <td>No</td>
-                                                </tr>
-                                            
-                                            
-                                                <tr>
-                                                    <td>dr Nixon</td>
-                                                    <td>System Architect</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>61</td>
-                                                    <td>2011/04/25</td>
-                                                    <td>$320,800</td>
-                                                    <td>2011/04/25</td>
-                                                    <td>$320,800</td>
-                                                    <td>No</td>
-                                                    <td>No</td>
-                                                    <td>No</td>
-                                                </tr>
+                                                <?php for ($i = 0; $i < count($response["userdata"]); $i++) {
+                                                    ?>
+                                                    <tr>
+                                                        <td><?php echo $response["userdata"][$i]["Username"][count($response["userdata"][$i]["Username"]) - 1]; ?></td>
+                                                        <td><?php
+                                                            $number = $response["userdata"][$i]["Phone_Number"][0]["Number"];
+                                                            $code = $response["userdata"][$i]["Phone_Number"][0]["Contry_Code"];
+                                                            echo $code . "" . $number;
+                                                            ?></td>
+                                                        <td><?php echo $response["userdata"][$i]["Email"]["EmailAddress"]; ?></td>
+                                                        <td><?php echo $response["userdata"][$i]["Contact_Not_Recognized"]; ?></td>
+                                                        <td><?php echo $response["userdata"][$i]["Add_New_Number_From_App"]; ?></td>
+                                                        <td><?php echo count($response["userdata"][$i]["Contact_List"]); ?></td>
+                                                        <td><?php echo $response["userdata"][$i]["Contact_Remove_Ratio"]; ?></td>
+                                                        <td><?php echo $response["userdata"][$i]["Not_In_App_Purchase"]; ?></td>
+                                                        <td><?php
+                                                            if ($response["userdata"][$i]["is_Block"] == 0) {
+                                                                echo "No";
+                                                            } else {
+                                                                echo 'Yes';
+                                                            }
+                                                            ?></td>
+                                                        <td><?php
+                                                            if ($response["userdata"][$i]["is_Online"] == 0) {
+                                                                echo "No";
+                                                            } else {
+                                                                echo 'Yes';
+                                                            }
+                                                            ?></td>
+                                                        <td><?php
+                                                            if ($response["userdata"][$i]["is_Deleted"] == 0) {
+                                                                echo "No";
+                                                            } else {
+                                                                echo 'Yes';
+                                                            }
+                                                            ?></td>
+                                                    </tr>
+                                                <?php } ?>
                                             </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Phone number</th>
-                                                    <th>Email Address</th>
-                                                    <th>Contact not recognized</th>
-                                                    <th>New numbers via app</th>
-                                                    <th>Total contacts</th>
-                                                    <th>Contact remove ratio</th>
-                                                    <th>Not in-app purchase</th>
-                                                    <th>isBlock</th>
-                                                    <th>isOnline</th>
-                                                    <th>isDeleted</th>
-                                                    
-                                                </tr>
-                                            </tfoot>
+
                                         </table>
                                     </div>
 
@@ -121,9 +161,9 @@
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
 
-               <?php include 'footer.php'; ?>
+                <?php include 'footer.php'; ?>
             </div>
         </div>
         <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
