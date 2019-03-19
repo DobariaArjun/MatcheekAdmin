@@ -22,6 +22,46 @@
         </script> 
     </head>
 
+    <?PHP
+
+    function callAPI($method, $url, $data) {
+        $curl = curl_init();
+
+        switch ($method) {
+            case "POST":
+                curl_setopt($curl, CURLOPT_POST, 1);
+                if ($data)
+                    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+                break;
+            case "PUT":
+                curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
+                if ($data)
+                    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+                break;
+            default:
+                if ($data)
+                    $url = sprintf("%s?%s", $url, http_build_query($data));
+        }
+
+        // OPTIONS:
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+            'APIKEY: 111111111111111111111',
+            'Content-Type: application/json',
+        ));
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+
+        // EXECUTE:
+        $result = curl_exec($curl);
+        if (!$result) {
+            die("Connection Failure");
+        }
+        curl_close($curl);
+        return $result;
+    }
+    ?>
+
     <body>
 
         <div class="preloader">
@@ -58,7 +98,11 @@
                                         <i class="mdi mdi-alert"></i>
                                     </h1>
                                     <h6 class="text-white">Total Not Yet Login User</h6>
-                                    <h5 class="text-white">0</h5>
+                                    <h5 class="text-white" onload="<?php
+                                        $get_data = callAPI('GET', 'https://switlover.herokuapp.com/api/count', false);
+                                        $response = json_decode($get_data, true);
+                                        echo $response;
+                                        ?>"></h5>
                                 </div>
                             </div>
                         </div>
