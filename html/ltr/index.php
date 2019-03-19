@@ -9,7 +9,7 @@
         <meta name="author" content="">
     <a href="index.php"></a>
 
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/fevicon.png">
     <title>SwitLover - Admin panel</title>
     <link href="../../dist/css/style.min.css" rel="stylesheet">
 
