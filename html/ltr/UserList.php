@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/fevicon.png">
-        <title>Matrix Template - The Ultimate Multipurpose admin template</title>
+        <title>Matcheek - Admin panel</title>
         <link rel="stylesheet" type="text/css" href="../../assets/extra-libs/multicheck/multicheck.css">
         <link href="../../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
         <link href="../../dist/css/style.min.css" rel="stylesheet">
