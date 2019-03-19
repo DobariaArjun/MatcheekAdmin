@@ -36,6 +36,13 @@
             window.onunload = function () {
                 null
             };
+        function preventBack() {
+                window.history.forward();
+            }
+            setTimeout("preventBack()", 0);
+            window.onunload = function () {
+                null
+            };
     </script>
 </head>
 
