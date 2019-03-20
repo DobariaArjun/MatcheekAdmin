@@ -117,7 +117,13 @@
                                                 <?php for ($i = 0; $i < count($response["userdata"]); $i++) {
                                                     ?>
                                                     <tr>
-                                                        <td><?php echo $response["userdata"][$i]["Username"][count($response["userdata"][$i]["Username"]) - 1]; ?></td>
+                                                        <td><?php
+                                                            if (count($response["userdata"][$i]["Username"]) > 0) {
+                                                                echo $response["userdata"][$i]["Username"][count($response["userdata"][$i]["Username"]) - 1];
+                                                            } else {
+                                                                echo '';
+                                                            }
+                                                            ?></td>
                                                         <td><?php
                                                             $number = $response["userdata"][$i]["Phone_Number"][0]["Number"];
                                                             $code = $response["userdata"][$i]["Phone_Number"][0]["Contry_Code"];
@@ -130,11 +136,11 @@
                                                         <td><?php echo $response["userdata"][$i]["Contact_Remove_Ratio"]; ?></td>
                                                         <td><?php echo $response["userdata"][$i]["Not_In_App_Purchase"]; ?></td>
                                                         <td><?php
-                                                            if ($response["userdata"][$i]["is_Block"] == 0) {
-                                                                echo "No";
-                                                            } else {
-                                                                echo 'Yes';
-                                                            }
+                                                        if ($response["userdata"][$i]["is_Block"] == 0) {
+                                                            echo "No";
+                                                        } else {
+                                                            echo 'Yes';
+                                                        }
                                                             ?></td>
                                                         <td><?php
                                                             if ($response["userdata"][$i]["is_Online"] == 0) {
@@ -151,7 +157,7 @@
                                                             }
                                                             ?></td>
                                                     </tr>
-                                                <?php } ?>
+                                                        <?php } ?>
                                             </tbody>
 
                                         </table>
@@ -163,7 +169,7 @@
                     </div>
                 </div>
 
-                <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
             </div>
         </div>
         <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
