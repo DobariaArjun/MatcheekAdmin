@@ -21,6 +21,21 @@
             window.onunload = function () {
                 null
             };
+
+            function showMore() {
+                var showmore = document.getElementById("showmore").value;
+                alert(showmore);
+            }
+
+            function block() {
+                var block = document.getElementById("block").value;
+                alert(block);
+            }
+
+            function deleteUser() {
+                var deleteUser = document.getElementById("deleteUser").value;
+                alert(deleteUser);
+            }
         </script> 
     </head>
 
@@ -95,16 +110,17 @@
                                             <thead style="background-color: skyblue;">
                                                 <tr>
                                                     <th>Name</th>
-                                                    <th>Phone number</th>
+                                                    <th>Primary Number</th>
                                                     <th>Email Address</th>
-                                                    <th>Contact not recognized</th>
-                                                    <th>New numbers via app</th>
-                                                    <th>Total contacts</th>
-                                                    <th>Contact remove ratio</th>
-                                                    <th>Not in-app purchase</th>
-                                                    <th>isBlock</th>
-                                                    <th>isOnline</th>
-                                                    <th>isDeleted</th>
+                                                    <!--<th>Number not recognized</th>-->
+                                                    <!--<th>Contact via app</th>-->
+                                                    <!--<th>Total contacts</th>-->
+                                                    <!--<th>Number remove ratio</th>-->
+                                                    <!--<th>No inapp purchase</th>-->
+                                                    <th>Block</th>
+                                                    <th>Online</th>
+                                                    <th>Deleted</th>
+                                                    <th>Action</th>
 
                                                 </tr>
                                             </thead>
@@ -113,8 +129,10 @@
                                             $response = json_decode($get_data, true);
                                             //echo $response["userdata"];
                                             ?>
+
                                             <tbody>
-                                                <?php for ($i = 0; $i < count($response["userdata"]); $i++) {
+                                                <?php
+                                                for ($i = 0; $i < count($response["userdata"]); $i++) {
                                                     ?>
                                                     <tr>
                                                         <td><?php
@@ -130,17 +148,17 @@
                                                             echo $code . "" . $number;
                                                             ?></td>
                                                         <td><?php echo $response["userdata"][$i]["Email"]["EmailAddress"]; ?></td>
-                                                        <td><?php echo $response["userdata"][$i]["Contact_Not_Recognized"]; ?></td>
-                                                        <td><?php echo $response["userdata"][$i]["Add_New_Number_From_App"]; ?></td>
-                                                        <td><?php echo count($response["userdata"][$i]["Contact_List"]); ?></td>
-                                                        <td><?php echo $response["userdata"][$i]["Contact_Remove_Ratio"]; ?></td>
-                                                        <td><?php echo $response["userdata"][$i]["Not_In_App_Purchase"]; ?></td>
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Not_Recognized"];                       ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Add_New_Number_From_App"];                       ?></td>-->
+                                                        <!--<td><?php //echo count($response["userdata"][$i]["Contact_List"]);                       ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Remove_Ratio"];                       ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Not_In_App_Purchase"];                       ?></td>-->
                                                         <td><?php
-                                                        if ($response["userdata"][$i]["is_Block"] == 0) {
-                                                            echo "No";
-                                                        } else {
-                                                            echo 'Yes';
-                                                        }
+                                                            if ($response["userdata"][$i]["is_Block"] == 0) {
+                                                                echo "No";
+                                                            } else {
+                                                                echo 'Yes';
+                                                            }
                                                             ?></td>
                                                         <td><?php
                                                             if ($response["userdata"][$i]["is_Online"] == 0) {
@@ -156,10 +174,25 @@
                                                                 echo 'Yes';
                                                             }
                                                             ?></td>
-                                                    </tr>
-                                                        <?php } ?>
-                                            </tbody>
+                                                        <td>
 
+                                                            <a href="Home.php?id=<?php echo $response["userdata"][$i]["_id"];?>">
+                                                                <input type="submit" name="action" value="Show more" class="btn btn-outline-info btn-sm"/>
+                                                            </a>
+                                                            <?php if ($response["userdata"][$i]["is_Block"] == 0) { ?>
+                                                                <input type="submit" name="action" value="Block" class="btn btn-outline-warning btn-sm"/>
+                                                            <?php } else { ?>
+                                                                <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
+                                                            <?php } ?>
+                                                            <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
+                                                            
+
+                                                        </td>
+
+                                                    </tr>
+                                                <?php } ?>
+                                            </tbody>
+                                            
                                         </table>
                                     </div>
 
@@ -169,7 +202,7 @@
                     </div>
                 </div>
 
-<?php include 'footer.php'; ?>
+                <?php include 'footer.php'; ?>
             </div>
         </div>
         <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
