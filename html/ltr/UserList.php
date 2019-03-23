@@ -148,11 +148,11 @@
                                                             echo $code . "" . $number;
                                                             ?></td>
                                                         <td><?php echo $response["userdata"][$i]["Email"]["EmailAddress"]; ?></td>
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Not_Recognized"];                       ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Add_New_Number_From_App"];                       ?></td>-->
-                                                        <!--<td><?php //echo count($response["userdata"][$i]["Contact_List"]);                       ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Remove_Ratio"];                       ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Not_In_App_Purchase"];                       ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Not_Recognized"];                        ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Add_New_Number_From_App"];                        ?></td>-->
+                                                        <!--<td><?php //echo count($response["userdata"][$i]["Contact_List"]);                        ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Remove_Ratio"];                        ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Not_In_App_Purchase"];                        ?></td>-->
                                                         <td><?php
                                                             if ($response["userdata"][$i]["is_Block"] == 0) {
                                                                 echo "No";
@@ -176,7 +176,7 @@
                                                             ?></td>
                                                         <td>
 
-                                                            <a href="Home.php?id=<?php echo $response["userdata"][$i]["_id"];?>">
+                                                            <a href="ShowDetailsofUser.php?id=<?php echo $response["userdata"][$i]["_id"]; ?>">
                                                                 <input type="submit" name="action" value="Show more" class="btn btn-outline-info btn-sm"/>
                                                             </a>
                                                             <?php if ($response["userdata"][$i]["is_Block"] == 0) { ?>
@@ -185,14 +185,14 @@
                                                                 <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
                                                             <?php } ?>
                                                             <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
-                                                            
+
 
                                                         </td>
 
                                                     </tr>
                                                 <?php } ?>
                                             </tbody>
-                                            
+
                                         </table>
                                     </div>
 
