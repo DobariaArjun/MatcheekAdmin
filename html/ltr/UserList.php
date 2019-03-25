@@ -148,11 +148,11 @@
                                                             echo $code . "" . $number;
                                                             ?></td>
                                                         <td><?php echo $response["userdata"][$i]["Email"]["EmailAddress"]; ?></td>
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Not_Recognized"];                        ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Add_New_Number_From_App"];                        ?></td>-->
-                                                        <!--<td><?php //echo count($response["userdata"][$i]["Contact_List"]);                        ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Remove_Ratio"];                        ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Not_In_App_Purchase"];                        ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Not_Recognized"];                              ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Add_New_Number_From_App"];                              ?></td>-->
+                                                        <!--<td><?php //echo count($response["userdata"][$i]["Contact_List"]);                              ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Remove_Ratio"];                              ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Not_In_App_Purchase"];                              ?></td>-->
                                                         <td><?php
                                                             if ($response["userdata"][$i]["is_Block"] == 0) {
                                                                 echo "No";
@@ -175,33 +175,41 @@
                                                             }
                                                             ?></td>
                                                         <td>
+                                                            <form>
+                                                                <a href="ShowDetailsofUser.php?id=<?php echo $response["userdata"][$i]["_id"]; ?>">
+                                                                    <input type="button" name="action" value="Show more" class="btn btn-outline-info btn-sm"/>
+                                                                </a>
 
-                                                            <a href="ShowDetailsofUser.php?id=<?php echo $response["userdata"][$i]["_id"]; ?>">
-                                                                <input type="submit" name="action" value="Show more" class="btn btn-outline-info btn-sm"/>
-                                                            </a>
-                                                            <?php if ($response["userdata"][$i]["is_Block"] == 0) { ?>
-                                                                <input type="submit" name="action" value="Block" class="btn btn-outline-warning btn-sm"/>
-                                                            <?php } else { ?>
-                                                                <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
-                                                            <?php } ?>
-                                                            <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
+                                                                <?php if ($response["userdata"][$i]["is_Block"] == 0) { ?>
+                                                                    <input type="submit" name="action" value="Block" class="btn btn-outline-warning btn-sm"/>
+                                                                <?php } else { ?>
+                                                                    <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
+                                                                <?php } ?>
 
-
+                                                                <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
+                                                            </form>
                                                         </td>
-
                                                     </tr>
+                                                    <?php
+                                                    if (isset($_REQUEST['action'])) {
+                                                        if ($_REQUEST['action'] == "Block" || $_REQUEST['action'] == "Unblock") {
+                                                            $postData = array(
+                                                                'id' => $response["userdata"][$i]["_id"]
+                                                            );
+                                                            $jsonData = json_encode($postData);
+                                                            $get_data = callAPI('POST', 'http://localhost:3000/api/block_unblock', json_encode($postData));
+                                                        }
+                                                    }
+                                                    ?>
                                                 <?php } ?>
                                             </tbody>
-
                                         </table>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <?php include 'footer.php'; ?>
             </div>
         </div>
