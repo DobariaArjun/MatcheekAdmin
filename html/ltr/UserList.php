@@ -197,7 +197,7 @@
                                                                 'id' => $response["userdata"][$i]["_id"]
                                                             );
                                                             $jsonData = json_encode($postData);
-                                                            $get_data = callAPI('POST', 'http://localhost:3000/api/block_unblock', json_encode($postData));
+                                                            $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/block_unblock', json_encode($postData));
                                                         }
                                                     }
                                                     ?>

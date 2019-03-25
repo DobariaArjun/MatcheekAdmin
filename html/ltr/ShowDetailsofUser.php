@@ -209,7 +209,7 @@
                                     } else {
                                         echo '';
                                     }
-                                    ?>'s details</h3>
+                                    ?></h3>
                             </div>
                         </div>
                     </div>
@@ -270,7 +270,7 @@
                                                             <div class="col-md-6 text-white"><h4>Power of match : </h4></div>
                                                             <div class="col-md-6 text-white"><h4><?php
                                                                     if ($response["userdata"][$i]["PowerID"]["Power_Of_Match"] == 0) {
-                                                                        echo "Desabled";
+                                                                        echo "Disable";
                                                                     } else {
                                                                         echo "Enabled";
                                                                     }
@@ -280,7 +280,7 @@
                                                             <div class="col-md-6 text-white"><h4>Power of time : </h4></div>
                                                             <div class="col-md-6 text-white"><h4><?php
                                                                     if ($response["userdata"][$i]["PowerID"]["Power_Of_Time"] == 0) {
-                                                                        echo "Desabled";
+                                                                        echo "Disable";
                                                                     } else {
                                                                         echo "Enabled";
                                                                     }
@@ -290,7 +290,7 @@
                                                             <div class="col-md-6 text-white"><h4>Golden power : </h4></div>
                                                             <div class="col-md-6 text-white"><h4><?php
                                                                     if ($response["userdata"][$i]["PowerID"]["Golden_Power"] == 0) {
-                                                                        echo "Desabled";
+                                                                        echo "Disable";
                                                                     } else {
                                                                         echo "Enabled";
                                                                     }
@@ -325,7 +325,7 @@
                                                 <div class="card card-hover">
                                                     <div class="box bg-success">
                                                         <div class="row">
-                                                            <div class="col-md-6 text-white"><h4>User is block : </h4></div>
+                                                            <div class="col-md-6 text-white"><h4>Is block? : </h4></div>
                                                             <div class="col-md-6 text-white"><h4><?php
                                                                     if ($response["userdata"][$i]["is_Block"] == 0) {
                                                                         echo "No";
@@ -335,7 +335,7 @@
                                                                     ?></h4></div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-md-6 text-white"><h4>User is online : </h4></div>
+                                                            <div class="col-md-6 text-white"><h4>Is online? : </h4></div>
                                                             <div class="col-md-6 text-white"><h4><?php
                                                                     if ($response["userdata"][$i]["is_Online"] == 0) {
                                                                         echo "No";
@@ -345,7 +345,7 @@
                                                                     ?></h4></div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-md-6 text-white"><h4>User is deleted : </h4></div>
+                                                            <div class="col-md-6 text-white"><h4>Is deleted? : </h4></div>
                                                             <div class="col-md-6 text-white"><h4><?php
                                                                     if ($response["userdata"][$i]["is_Deleted"] == 0) {
                                                                         echo "No";
