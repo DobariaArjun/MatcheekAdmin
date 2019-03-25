@@ -325,7 +325,7 @@
                                                 <div class="card card-hover">
                                                     <div class="box bg-success">
                                                         <div class="row">
-                                                            <div class="col-md-6 text-white"><h4>Is block? : </h4></div>
+                                                            <div class="col-md-6 text-white"><h4>Is blocked? : </h4></div>
                                                             <div class="col-md-6 text-white"><h4><?php
                                                                     if ($response["userdata"][$i]["is_Block"] == 0) {
                                                                         echo "No";
