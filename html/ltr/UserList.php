@@ -14,13 +14,13 @@
         <link href="../../dist/css/style.min.css" rel="stylesheet">
 
         <script type="text/javascript" >
-            function preventBack() {
-                window.history.forward();
-            }
-            setTimeout("preventBack()", 0);
-            window.onunload = function () {
-                null
-            };
+//            function preventBack() {
+//                window.history.forward();
+//            }
+//            setTimeout("preventBack()", 0);
+//            window.onunload = function () {
+//                null
+//            };
 
             function showMore() {
                 var showmore = document.getElementById("showmore").value;
