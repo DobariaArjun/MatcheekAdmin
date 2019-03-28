@@ -12,13 +12,13 @@
         <link href="../../assets/libs/flot/css/float-chart.css" rel="stylesheet">
         <link href="../../dist/css/style.min.css" rel="stylesheet">
         <script type="text/javascript" >
-            function preventBack() {
-                window.history.forward();
-            }
-            setTimeout("preventBack()", 0);
-            window.onunload = function () {
-                null
-            };
+//            function preventBack() {
+//                window.history.forward();
+//            }
+//            setTimeout("preventBack()", 0);
+//            window.onunload = function () {
+//                null
+//            };
         </script> 
     </head>
 
