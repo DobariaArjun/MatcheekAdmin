@@ -366,12 +366,23 @@
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Number of contact : </h4></div>
                                                             <div class="col-md-3 text-white"><h4><?php echo count($response["userdata"][$i]["Contact_List"]); ?></h4></div>
-                                                            <div class="col-md-3 text-white"><a href="Contact_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" class="text-white">See Contacts</a></div>
+                                                            <div class="col-md-3">
+                                                                <a href="Contact_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" >
+                                                                    <button type="button" class="btn btn-outline-light">
+                                                                        See Contacts
+                                                                    </button>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Total liked contacts : </h4></div>
                                                             <div class="col-md-3 text-white"><h4><?php echo count($response["userdata"][$i]["Like"]); ?></h4></div>
-                                                            <div class="col-md-3 text-white"><a href="Like_Contact_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" class="text-white">See Contacts</a></div>
+                                                            <div class="col-md-3 text-white "><a href="Like_Contact_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>">
+                                                                    <button type="button" class="btn btn-outline-light">
+                                                                        See Contacts
+                                                                    </button>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Contacts not recognized : </h4></div>
