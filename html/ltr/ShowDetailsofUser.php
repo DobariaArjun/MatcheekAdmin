@@ -376,17 +376,17 @@
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Contacts not recognized : </h4></div>
                                                             <div class="col-md-3 text-white"><h4><?php echo $response["userdata"][$i]["Contact_Not_Recognized"]; ?></h4></div>
-                                                            <div class="col-md-3 text-white"><a href="#" class="text-white">See Contacts</a></div>
+                                                            <!--<div class="col-md-3 text-white"><a href="#" class="text-white">See Contacts</a></div>-->
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Contacts add via app : </h4></div>
                                                             <div class="col-md-3 text-white"><h4><?php echo $response["userdata"][$i]["Add_New_Number_From_App"]; ?></h4></div>
-                                                            <div class="col-md-3 text-white"><a href="#" class="text-white">See Contacts</a></div>
+                                                            <!--<div class="col-md-3 text-white"><a href="#" class="text-white">See Contacts</a></div>-->
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Contacts remove ratio : </h4></div>
                                                             <div class="col-md-3 text-white"><h4><?php echo $response["userdata"][$i]["Contact_Remove_Ratio"]; ?></h4></div>
-                                                            <div class="col-md-3 text-white"><a href="#" class="text-white">See Contacts</a></div>
+                                                            <!--<div class="col-md-3 text-white"><a href="#" class="text-white">See Contacts</a></div>-->
                                                         </div>
                                                     </div>
                                                 </div>
