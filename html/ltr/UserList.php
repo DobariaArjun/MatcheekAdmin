@@ -148,11 +148,11 @@
                                                             echo $code . "" . $number;
                                                             ?></td>
                                                         <td><?php echo $response["userdata"][$i]["Email"]["EmailAddress"]; ?></td>
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Not_Recognized"];                               ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Add_New_Number_From_App"];                               ?></td>-->
-                                                        <!--<td><?php //echo count($response["userdata"][$i]["Contact_List"]);                               ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Remove_Ratio"];                               ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Not_In_App_Purchase"];                               ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Not_Recognized"];                                ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Add_New_Number_From_App"];                                ?></td>-->
+                                                        <!--<td><?php //echo count($response["userdata"][$i]["Contact_List"]);                                ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Remove_Ratio"];                                ?></td>-->
+                                                        <!--<td><?php //echo $response["userdata"][$i]["Not_In_App_Purchase"];                                ?></td>-->
                                                         <td><?php
                                                             if ($response["userdata"][$i]["is_Block"] == 0) {
                                                                 echo "No";
@@ -185,22 +185,23 @@
                                                                 <?php } else { ?>
                                                                     <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
                                                                 <?php } ?>
-
+                                                                    <input type="hidden" value="<?php echo $response["userdata"][$i]["_id"]; ?>" name="id"/>
                                                                 <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
                                                             </form>
+                                                            <?php
+                                                            if (isset($_REQUEST['action'])) {
+                                                                if ($_REQUEST['action'] == "Block" || $_REQUEST['action'] == "Unblock") {
+                                                                    $postData = array(
+                                                                        'id' => $_REQUEST['id']
+                                                                    );
+                                                                    $jsonData = json_encode($postData);
+                                                                    
+                                                                    $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/block_unblock', json_encode($postData));
+                                                                }
+                                                            }
+                                                            ?>
                                                         </td>
                                                     </tr>
-                                                    <?php
-                                                    if (isset($_REQUEST['action'])) {
-                                                        if ($_REQUEST['action'] == "Block" || $_REQUEST['action'] == "Unblock") {
-                                                            $postData = array(
-                                                                'id' => $response["userdata"][$i]["_id"]
-                                                            );
-                                                            $jsonData = json_encode($postData);
-                                                            $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/block_unblock', json_encode($postData));
-                                                        }
-                                                    }
-                                                    ?>
                                                 <?php } ?>
                                             </tbody>
                                         </table>
