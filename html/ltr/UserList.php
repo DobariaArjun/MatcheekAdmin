@@ -22,7 +22,7 @@
 //                null
 //            };
 
-            function reloadPage(){
+            function reloadPage() {
                 window.location = window.location.href.split("?")[0];
             }
 
@@ -136,61 +136,65 @@
 
                                             <tbody>
                                                 <?php
-                                                for ($i = 0; $i < count($response["userdata"]); $i++) {
-                                                    ?>
-                                                    <tr>
-                                                        <td><?php
-                                                            if (count($response["userdata"][$i]["Username"]) > 0) {
-                                                                echo $response["userdata"][$i]["Username"][count($response["userdata"][$i]["Username"]) - 1];
-                                                            } else {
-                                                                echo '';
-                                                            }
-                                                            ?></td>
-                                                        <td><?php
-                                                            $number = $response["userdata"][$i]["Phone_Number"][0]["Number"];
-                                                            $code = $response["userdata"][$i]["Phone_Number"][0]["Contry_Code"];
-                                                            echo $code . "" . $number;
-                                                            ?></td>
-                                                        <td><?php echo $response["userdata"][$i]["Email"]["EmailAddress"]; ?></td>
-                                                        <td><?php
-                                                            if ($response["userdata"][$i]["is_Block"] == 0) {
-                                                                echo "No";
-                                                            } else {
-                                                                echo 'Yes';
-                                                            }
-                                                            ?></td>
-                                                        <td><?php
-                                                            if ($response["userdata"][$i]["is_Online"] == 0) {
-                                                                echo "No";
-                                                            } else {
-                                                                echo 'Yes';
-                                                            }
-                                                            ?></td>
-                                                        <td><?php
-                                                            if ($response["userdata"][$i]["is_Deleted"] == 0) {
-                                                                echo "No";
-                                                            } else {
-                                                                echo 'Yes';
-                                                            }
-                                                            ?></td>
-                                                        <td>
-                                                            <form method="post">
-                                                                <a href="ShowDetailsofUser.php?id=<?php echo $response["userdata"][$i]["_id"]; ?>">
-                                                                    <input type="button" name="action" value="Show more" class="btn btn-outline-info btn-sm"/>
-                                                                </a>
+                                                if (count($response["userdata"]) == 0) {
+                                                    for ($i = 0; $i < count($response["userdata"]); $i++) {
+                                                        ?>
+                                                        <tr>
+                                                            <td><?php
+                                                                if (count($response["userdata"][$i]["Username"]) > 0) {
+                                                                    echo $response["userdata"][$i]["Username"][count($response["userdata"][$i]["Username"]) - 1];
+                                                                } else {
+                                                                    echo '';
+                                                                }
+                                                                ?></td>
+                                                            <td><?php
+                                                                $number = $response["userdata"][$i]["Phone_Number"][0]["Number"];
+                                                                $code = $response["userdata"][$i]["Phone_Number"][0]["Contry_Code"];
+                                                                echo $code . "" . $number;
+                                                                ?></td>
+                                                            <td><?php echo $response["userdata"][$i]["Email"]["EmailAddress"]; ?></td>
+                                                            <td><?php
+                                                                if ($response["userdata"][$i]["is_Block"] == 0) {
+                                                                    echo "No";
+                                                                } else {
+                                                                    echo 'Yes';
+                                                                }
+                                                                ?></td>
+                                                            <td><?php
+                                                                if ($response["userdata"][$i]["is_Online"] == 0) {
+                                                                    echo "No";
+                                                                } else {
+                                                                    echo 'Yes';
+                                                                }
+                                                                ?></td>
+                                                            <td><?php
+                                                                if ($response["userdata"][$i]["is_Deleted"] == 0) {
+                                                                    echo "No";
+                                                                } else {
+                                                                    echo 'Yes';
+                                                                }
+                                                                ?></td>
+                                                            <td>
+                                                                <form method="post">
+                                                                    <a href="ShowDetailsofUser.php?id=<?php echo $response["userdata"][$i]["_id"]; ?>">
+                                                                        <input type="button" name="action" value="Show more" class="btn btn-outline-info btn-sm"/>
+                                                                    </a>
 
-                                                                <?php if ($response["userdata"][$i]["is_Block"] == 0) { ?>
-                                                                    <input type="submit" name="action" value="Block" class="btn btn-outline-warning btn-sm"/>
-                                                                <?php } else { ?>
-                                                                    <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
-                                                                <?php } ?>
-                                                                <input type="hidden" value="<?php echo $response["userdata"][$i]["_id"]; ?>" name="id"/>
-                                                                <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
-                                                            </form>
+                                                                    <?php if ($response["userdata"][$i]["is_Block"] == 0) { ?>
+                                                                        <input type="submit" name="action" value="Block" class="btn btn-outline-warning btn-sm"/>
+                                                                    <?php } else { ?>
+                                                                        <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
+                                                                    <?php } ?>
+                                                                    <input type="hidden" value="<?php echo $response["userdata"][$i]["_id"]; ?>" name="id"/>
+                                                                    <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
+                                                                </form>
 
-                                                        </td>
-                                                    </tr>
-                                                <?php } ?>
+                                                            </td>
+                                                        </tr>
+                                                    <?php
+                                                    }
+                                                }
+                                                ?>
                                                 <?php
                                                 if (isset($_REQUEST['action'])) {
                                                     if ($_REQUEST['action'] == "Block" || $_REQUEST['action'] == "Unblock") {
@@ -207,8 +211,7 @@
                                                             ;
                                                         }
                                                     }
-                                                    if($_REQUEST['action'] == "Delete")
-                                                    {
+                                                    if ($_REQUEST['action'] == "Delete") {
                                                         $postData = array(
                                                             'id' => $_REQUEST['id']
                                                         );
