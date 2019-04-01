@@ -22,6 +22,10 @@
 //                null
 //            };
 
+            function reloadPage(){
+                window.location = window.location.href.split("?")[0];
+            }
+
             function showMore() {
                 var showmore = document.getElementById("showmore").value;
                 alert(showmore);
@@ -148,11 +152,6 @@
                                                             echo $code . "" . $number;
                                                             ?></td>
                                                         <td><?php echo $response["userdata"][$i]["Email"]["EmailAddress"]; ?></td>
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Not_Recognized"];                                ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Add_New_Number_From_App"];                                ?></td>-->
-                                                        <!--<td><?php //echo count($response["userdata"][$i]["Contact_List"]);                                ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Contact_Remove_Ratio"];                                ?></td>-->
-                                                        <!--<td><?php //echo $response["userdata"][$i]["Not_In_App_Purchase"];                                ?></td>-->
                                                         <td><?php
                                                             if ($response["userdata"][$i]["is_Block"] == 0) {
                                                                 echo "No";
@@ -175,7 +174,7 @@
                                                             }
                                                             ?></td>
                                                         <td>
-                                                            <form>
+                                                            <form method="post">
                                                                 <a href="ShowDetailsofUser.php?id=<?php echo $response["userdata"][$i]["_id"]; ?>">
                                                                     <input type="button" name="action" value="Show more" class="btn btn-outline-info btn-sm"/>
                                                                 </a>
@@ -185,24 +184,46 @@
                                                                 <?php } else { ?>
                                                                     <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
                                                                 <?php } ?>
-                                                                    <input type="hidden" value="<?php echo $response["userdata"][$i]["_id"]; ?>" name="id"/>
+                                                                <input type="hidden" value="<?php echo $response["userdata"][$i]["_id"]; ?>" name="id"/>
                                                                 <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
                                                             </form>
-                                                            <?php
-                                                            if (isset($_REQUEST['action'])) {
-                                                                if ($_REQUEST['action'] == "Block" || $_REQUEST['action'] == "Unblock") {
-                                                                    $postData = array(
-                                                                        'id' => $_REQUEST['id']
-                                                                    );
-                                                                    $jsonData = json_encode($postData);
-                                                                    
-                                                                    $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/block_unblock', json_encode($postData));
-                                                                }
-                                                            }
-                                                            ?>
+
                                                         </td>
                                                     </tr>
                                                 <?php } ?>
+                                                <?php
+                                                if (isset($_REQUEST['action'])) {
+                                                    if ($_REQUEST['action'] == "Block" || $_REQUEST['action'] == "Unblock") {
+                                                        $postData = array(
+                                                            'id' => $_REQUEST['id']
+                                                        );
+                                                        $jsonData = json_encode($postData);
+                                                        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/block_unblock', json_encode($postData));
+                                                        $response1 = json_decode($get_data, true);
+                                                        if ($response1["status"] == 1) {
+                                                            echo '<script type="text/javascript">',
+                                                            'reloadPage();',
+                                                            '</script>'
+                                                            ;
+                                                        }
+                                                    }
+                                                    if($_REQUEST['action'] == "Delete")
+                                                    {
+                                                        $postData = array(
+                                                            'id' => $_REQUEST['id']
+                                                        );
+                                                        $jsonData = json_encode($postData);
+                                                        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/deleteUser', json_encode($postData));
+                                                        $response1 = json_decode($get_data, true);
+                                                        if ($response1["status"] == 1) {
+                                                            echo '<script type="text/javascript">',
+                                                            'reloadPage();',
+                                                            '</script>'
+                                                            ;
+                                                        }
+                                                    }
+                                                }
+                                                ?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -211,7 +232,7 @@
                         </div>
                     </div>
                 </div>
-                <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
             </div>
         </div>
         <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
