@@ -420,6 +420,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="card card-hover">
+                                                    <div class="box bg-dark">
+                                                        <div class="row">
+                                                            <div class="col-md-6 text-white"><h4>Notification Settings : </h4></div>
+                                                            <div class="col-md-6 text-white"><h4><a href="UserNotification.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" class="btn-outline-light">See Settings</a></h4></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
