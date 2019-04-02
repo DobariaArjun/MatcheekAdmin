@@ -21,6 +21,12 @@
 //            window.onunload = function () {
 //                null
 //            };
+            function reloadPage() {
+                var data = window.location.href.split("?")[1];
+                var iddata = data.split("&")[1];
+                window.location = window.location.href.split("?")[0] + "?" + iddata;
+                
+            }
 
             function showMore() {
                 var showmore = document.getElementById("showmore").value;
@@ -128,8 +134,9 @@
 
                                             <tbody>
                                                 <?php
-                                                for ($i = 0; $i < count($response["userdata"]); $i++) {
-                                                    if (count($response["userdata"][$i]["Contact_List"]) != 0) {
+                                                if ($response != NIL) {
+                                                    for ($i = 0; $i < count($response["userdata"]); $i++) {
+
                                                         for ($j = 0; $j < count($response["userdata"][$i]["Contact_List"]); $j++) {
                                                             ?>
                                                             <tr>
@@ -144,29 +151,40 @@
                                                                 <td>
                                                                     <form>
                                                                         <?php if ($response["userdata"][$i]["Contact_List"][$j]["isRemovedByAdmin"] == 0 && $response["userdata"][$i]["Contact_List"][$j]["isRemovedByUser"] == 0) { ?>
-                                                                            <input type="submit" name="action" value="Block" class="btn btn-outline-warning btn-sm"/>
+                                                                            <input type="submit" name="action" value="Remove" class="btn btn-outline-danger btn-sm"/>
                                                                         <?php } else { ?>
-                                                                            <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
+                                                                            <input type="submit" name="action" value="Put Back" class="btn btn-outline-warning btn-sm"/>
                                                                         <?php } ?>
-
-                                                                        <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
+                                                                        <input type="hidden" value="<?php echo $response["userdata"][$i]["_id"]; ?>" name="id"/>
+                                                                        <input type="hidden" value="<?php echo $response["userdata"][$i]["Contact_List"][$j]["number"]; ?>" name="number"/>
+                                                                        <!--<input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>-->
                                                                     </form>
                                                                 </td>
                                                             </tr>
-                                                            <?php
-                                                            if (isset($_REQUEST['action'])) {
-                                                                if ($_REQUEST['action'] == "Block" || $_REQUEST['action'] == "Unblock") {
-                                                                    $postData = array(
-                                                                        'id' => $response["userdata"][$i]["_id"]
-                                                                    );
-                                                                    $jsonData = json_encode($postData);
-                                                                    $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/block_unblock', json_encode($postData));
-                                                                }
-                                                            }
-                                                            ?>
+
                                                             <?php
                                                         }
-                                                    } 
+                                                    }
+                                                }
+                                                ?>
+                                                <?php
+                                                if (isset($_REQUEST['action'])) {
+                                                    if ($_REQUEST['action'] == "Remove" || $_REQUEST['action'] == "Put Back") {
+                                                        $postData = array(
+                                                            'id' => $_REQUEST['id'],
+                                                            'number' => $_REQUEST['number']
+                                                        );
+                                                        $jsonData = json_encode($postData);
+//                                                        echo $jsonData;
+                                                        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/blockNumber', json_encode($postData));
+                                                        $response1 = json_decode($get_data, true);
+                                                        if ($response1["status"] == 1) {
+                                                            echo '<script type="text/javascript">',
+                                                            'reloadPage();',
+                                                            '</script>'
+                                                            ;
+                                                        }
+                                                    }
                                                 }
                                                 ?>
                                             </tbody>

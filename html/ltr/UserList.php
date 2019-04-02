@@ -136,7 +136,7 @@
 
                                             <tbody>
                                                 <?php
-                                                if (count($response["userdata"]) == 0) {
+                                                if (count($response["userdata"]) != 0) {
                                                     for ($i = 0; $i < count($response["userdata"]); $i++) {
                                                         ?>
                                                         <tr>
@@ -175,7 +175,7 @@
                                                                 }
                                                                 ?></td>
                                                             <td>
-                                                                <form method="post">
+                                                                <form>
                                                                     <a href="ShowDetailsofUser.php?id=<?php echo $response["userdata"][$i]["_id"]; ?>">
                                                                         <input type="button" name="action" value="Show more" class="btn btn-outline-info btn-sm"/>
                                                                     </a>
