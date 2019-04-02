@@ -235,9 +235,7 @@
                                                 <div class="card card-hover">
                                                     <div class="box bg-cyan">
                                                         <div class="row">
-                                                            <div class="col-md-6 text-white">
-                                                                <h4>Username : </h4>
-                                                            </div>
+                                                            <div class="col-md-6 text-white"> <h4>Username : </h4> </div>
                                                             <div class="col-md-6 text-white">
                                                                 <h4><?php
                                                                     if (count($response["userdata"][$i]["Username"]) > 0) {
@@ -250,11 +248,18 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Primary Number : </h4></div>
-                                                            <div class="col-md-6 text-white"><h4><?php
+                                                            <div class="col-md-3 text-white"><h4><?php
                                                                     $number = $response["userdata"][$i]["Phone_Number"][0]["Number"];
                                                                     $code = $response["userdata"][$i]["Phone_Number"][0]["Contry_Code"];
                                                                     echo $code . "" . $number;
                                                                     ?></h4></div>
+                                                            <div class="col-md-3">
+                                                                <h4><a href="Phone_Number_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" class="btn-outline-light">
+                                                                    <!--<button type="button" class="btn btn-outline-light">-->
+                                                                        See Other Numbers
+                                                                    <!--</button>-->
+                                                                    </a></h4>
+                                                            </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Email Address : </h4></div>
@@ -367,21 +372,21 @@
                                                             <div class="col-md-6 text-white"><h4>Number of contact : </h4></div>
                                                             <div class="col-md-3 text-white"><h4><?php echo count($response["userdata"][$i]["Contact_List"]); ?></h4></div>
                                                             <div class="col-md-3">
-                                                                <a href="Contact_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" >
-                                                                    <button type="button" class="btn btn-outline-light">
-                                                                        See Contacts
-                                                                    </button>
-                                                                </a>
+                                                                <h4><a href="Contact_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" class="btn-outline-light">
+                                                                    <!--<button type="button" class="btn btn-outline-light">-->
+                                                                        See Other Contacts
+                                                                    <!--</button>-->
+                                                                    </a></h4>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Total liked contacts : </h4></div>
                                                             <div class="col-md-3 text-white"><h4><?php echo count($response["userdata"][$i]["Like"]); ?></h4></div>
-                                                            <div class="col-md-3 text-white "><a href="Like_Contact_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>">
-                                                                    <button type="button" class="btn btn-outline-light">
-                                                                        See Contacts
-                                                                    </button>
-                                                                </a>
+                                                            <div class="col-md-3 text-white "><h4><a href="Like_Contact_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" class="btn-outline-light">
+                                                                    <!--<button type="button" class="btn btn-outline-light">-->
+                                                                        See Other Contacts
+                                                                    <!--</button>-->
+                                                                    </a></h4>
                                                             </div>
                                                         </div>
                                                         <div class="row">
