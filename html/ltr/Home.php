@@ -12,7 +12,6 @@
         <link href="../../assets/libs/flot/css/float-chart.css" rel="stylesheet">
         <link href="../../dist/css/style.min.css" rel="stylesheet">
     </head>
-
     <?PHP
 
     function callAPI($method, $url, $data) {
