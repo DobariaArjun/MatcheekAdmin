@@ -117,9 +117,9 @@
                                                     <th>Name</th>
                                                     <th>Primary Number</th>
                                                     <th>Email Address</th>
-                                                    <th>Block</th>
-                                                    <th>Online</th>
                                                     <th>Deleted</th>
+                                                    <th>Online</th>
+                                                    <th>Block</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>

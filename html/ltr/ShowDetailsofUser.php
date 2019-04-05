@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-    <?php include './APIBaseURL.php'; ?>
+    <?php
+    include './APIBaseURL.php';
+    ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -140,23 +142,36 @@
             $(document).ready(function () {
                 var jsonObj = [];
                 $("#block").click(function () {
+                    var data = window.location.href.split("id=")[1];
                     item = {};
-                    item ["id"] = "" + $('#block').val() + "";
+                    item ["id"] = data;
                     jsonObj.push(item);
+                    var isBlock = $('#block').val() ;
+//                    isBlock = "'"+isBlock+"'";
+//                    if(isBlock){isBlock = 'true'}else{isBlock = 'false'}
 //                    alert(JSON.stringify(item));
-//                    $.post({
-//                        url: 'http://localhost:3000/api/block_unblock',
-//                        data: jsonObj[0],
-//                        success: function (data, textStatus, xhr) {
-//                            alert(data);
-//                        },
-//                        error: function (xhr, textStatus, errorThrown) {
-//                            alert('Error in Operation');
-//                        }
-//                    });
-//                    $.post("http://localhost:3000/api/block_unblock", jsonObj[0], function (data) {
-//                        alert(data);
-//                    });
+                    $.ajax({
+                        url: 'http://localhost:3000/api/block_unblock',
+                        type: 'POST',
+                        data: jsonObj[0],
+                        complete: function ()
+                        {
+                            if (isBlock == 'true' || isBlock == true)
+                            {       
+                                $("#block").html('Unblock User');
+                                $('#block').attr('value','false');
+                                $("#isBlocked").html('<h4>Yes</h4>');
+                                
+                            }
+                            if(isBlock == 'false' || isBlock == false)
+                            {
+                                $("#block").html('Block User');
+                                $('#block').attr('value','true');
+                                $("#isBlocked").html('<h4>No</h4>');
+                            }
+                        }
+                    });
+                    
                     return false;
                 });
                 $("#delete").click(function () {
@@ -358,12 +373,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12 col-lg-6 col-xlg-3">
+                                            <div id="loadthis" class="col-md-12 col-lg-6 col-xlg-3">
                                                 <div class="card card-hover">
                                                     <div class="box bg-success">
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Is blocked? : </h4></div>
-                                                            <div class="col-md-6 text-white"><h4><?php
+                                                            <div id="isBlocked" class="col-md-6 text-white"><h4><?php
                                                                     if ($response["userdata"][$i]["is_Block"] == 0) {
                                                                         echo "No";
                                                                     } else {
@@ -468,8 +483,29 @@
                                                     <div>
 
                                                         <div class="row">
-                                                            <div class="col-md-6 text-white text-right"><h4><button id="block" value="<?php echo $response["userdata"][$i]["_id"]; ?>" class="btn-outline-warning">Block User</button></h4></div>
-                                                            <div class="col-md-6 text-white"><h4><button id="delete" value="<?php echo $response["userdata"][$i]["_id"]; ?>" class="btn-outline-danger">Delete User</button></h4></div>
+                                                            
+                                                            <?php
+                                                            if ($response["userdata"][$i]["is_Block"] == 0) {
+                                                                ?>
+                                                                <div class="col-md-6 text-white text-right"><h4><button id="block" value="false" class="btn-outline-warning">Block User</button></h4></div>
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                <div class="col-md-6 text-white text-right"><h4><button id="block" value="true" class="btn-outline-warning">Unblock User</button></h4></div>
+                                                                <?php
+                                                            }
+
+
+                                                            if ($response["userdata"][$i]["is_Deleted"] == 0) {
+                                                                ?>
+                                                                <div class="col-md-6 text-white"><h4><button id="delete" value="<?php echo $response["userdata"][$i]["_id"]; ?>" class="btn-outline-danger">Delete User</button></h4></div>
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                <div class="col-md-6 text-white"><h4><button id="delete" value="<?php echo $response["userdata"][$i]["_id"]; ?>" class="btn-outline-danger">Put Back User</button></h4></div>
+                                                                            <?php
+                                                                        }
+                                                                        ?>
                                                         </div>
 
                                                     </div>
