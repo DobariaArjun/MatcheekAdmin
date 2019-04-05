@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-
+<?php include './APIBaseURL.php'; ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,7 +67,7 @@
             'id' => print_r($output['id'], TRUE)
         );
         $jsonData = json_encode($postData);
-        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/singleUser', json_encode($postData));
+        $get_data = callAPI('POST', $BASE_URL.'singleUser', json_encode($postData));
         $response = json_decode($get_data, true);
         ?>
         <div id="main-wrapper">

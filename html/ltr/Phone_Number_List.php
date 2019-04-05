@@ -27,21 +27,6 @@
                 window.location = window.location.href.split("?")[0] + "?" + iddata;
 
             }
-
-            function showMore() {
-                var showmore = document.getElementById("showmore").value;
-                alert(showmore);
-            }
-
-            function block() {
-                var block = document.getElementById("block").value;
-                alert(block);
-            }
-
-            function deleteUser() {
-                var deleteUser = document.getElementById("deleteUser").value;
-                alert(deleteUser);
-            }
         </script> 
     </head>
 
@@ -157,18 +142,6 @@
                                                                         echo "Yes";
                                                                     }
                                                                     ?></td>
-                                                                <!--<td>-->
-                                                                <!--                                                                    <form>
-                                                                <?php //if ($response["userdata"][$i]["Phone_Number"][$j]["isRemovedByAdmin"] == 0 && $response["userdata"][$i]["Contact_List"][$j]["isRemovedByUser"] == 0) { ?>
-                                                                                                                                            <input type="submit" name="action" value="Remove" class="btn btn-outline-danger btn-sm"/>
-                                                                <?php //} else { ?>
-                                                                                                                                            <input type="submit" name="action" value="Put Back" class="btn btn-outline-warning btn-sm"/>
-                                                                <?php //} ?>
-                                                                                                                                        <input type="hidden" value="<?php //echo $response["userdata"][$i]["_id"];   ?>" name="id"/>
-                                                                                                                                        <input type="hidden" value="<?php //echo $response["userdata"][$i]["Contact_List"][$j]["number"];   ?>" name="number"/>
-                                                                                                                                        <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
-                                                                                                                                    </form>-->
-                                                                <!--</td>-->
                                                             </tr>
 
                                                             <?php

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-
+<?php include './APIBaseURL.php'; ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +11,6 @@
         <title>Matcheek - Admin panel</title>
         <link href="../../assets/libs/flot/css/float-chart.css" rel="stylesheet">
         <link href="../../dist/css/style.min.css" rel="stylesheet">
-        <script type="text/javascript" >
-//            function preventBack() {
-//                window.history.forward();
-//            }
-//            setTimeout("preventBack()", 0);
-//            window.onunload = function () {
-//                null
-//            };
-        </script> 
     </head>
 
     <?PHP
@@ -76,7 +67,6 @@
             <?php include 'leftSideBar.php'; ?>
 
             <div class="page-wrapper">
-
                 <div class="page-breadcrumb">
                     <div class="row">
                         <div class="col-12 d-flex no-block align-items-center">
@@ -86,13 +76,8 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="container-fluid">
-
-
-
                     <div class="row">
-                        <!-- Column -->
                         <div class="col-md-6 col-lg-4 col-xlg-3">
                             <div class="card card-hover">
                                 <div class="box bg-cyan text-center">
@@ -101,37 +86,13 @@
                                     </h1>
                                     <h6 class="text-white">Total Not Yet Login User</h6>
                                     <h5 class="text-white"><?php
-                                        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/notloginyetcount', false);
+                                        $get_data = callAPI('POST', $BASE_URL.'notloginyetcount', false);
                                         $response = json_decode($get_data, true);
                                         echo $response["userdata"];
                                         ?></h5>
                                 </div>
                             </div>
                         </div>
-                        <!-- Column -->
-                        <!--                        <div class="col-md-6 col-lg-4 col-xlg-3">
-                                                    <div class="card card-hover">
-                                                        <div class="box bg-success text-center">
-                                                            <h1 class="font-light text-white">
-                                                                <i class="mdi mdi-chart-areaspline"></i>
-                                                            </h1>
-                                                            <h6 class="text-white">Download Of Application Per Hour</h6>
-                                                            <h5 class="text-white">0</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
-                        <!-- Column -->
-                        <!--                        <div class="col-md-6 col-lg-4 col-xlg-3">
-                                                    <div class="card card-hover">
-                                                        <div class="box bg-warning text-center">
-                                                            <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
-                                                            <h6 class="text-white">Download Of Application Per Day</h6>
-                                                            <h5 class="text-white">0</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
-                        <!-- Column -->
-
                         <div class="col-md-6 col-lg-4 col-xlg-3">
                             <a href="UserList.php">
                                 <div class="card card-hover">
@@ -139,7 +100,7 @@
                                         <h1 class="font-light text-white"><i class="fa fa-user m-b-5 font-22"></i></h1>
                                         <h6 class="text-white">Total Users</h6>
                                         <h5 class="text-white"><?php
-                                            $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/count', false);
+                                            $get_data = callAPI('POST', $BASE_URL.'count', false);
                                             $response = json_decode($get_data, true);
                                             echo $response["userdata"];
                                             ?></h5>
@@ -147,8 +108,6 @@
                                 </div>
                             </a>
                         </div>
-
-                        <!-- Column -->
                         <div class="col-md-6 col-lg-4 col-xlg-3">
                             <div class="card card-hover">
                                 <div class="box bg-success text-center">
@@ -158,38 +117,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Column -->
-                        <!-- Column -->
-                        <!--                        <div class="col-md-6 col-lg-4 col-xlg-3">
-                                                    <div class="card card-hover">
-                                                        <div class="box bg-danger text-center">
-                                                            <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
-                                                            <h6 class="text-white">Average Time Spent on Application</h6>
-                                                            <h5 class="text-white">0</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
-                        <!-- Column -->
-                        <!--                        <div class="col-md-6 col-lg-2 col-xlg-3">
-                                                    <div class="card card-hover">
-                                                        <div class="box bg-info text-center">
-                                                            <h1 class="font-light text-white"><i class="mdi mdi-relative-scale"></i></h1>
-                                                            <h6 class="text-white">Access Application Per Day</h6>
-                                                            <h5 class="text-white">0</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
-                        <!-- Column -->
-                        <!--                        <div class="col-md-6 col-lg-2 col-xlg-3">
-                                                    <div class="card card-hover">
-                                                        <div class="box bg-cyan text-center">
-                                                            <h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1>
-                                                            <h6 class="text-white">Access Application Per Hour</h6>
-                                                            <h5 class="text-white">0</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
-
                     </div>
 
                 </div>

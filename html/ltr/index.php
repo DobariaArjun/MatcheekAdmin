@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include './APIBaseURL.php'; ?>
 <html dir="ltr">
     <head>
         <meta charset="utf-8">

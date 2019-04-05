@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-
+    <?php include './APIBaseURL.php'; ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -135,6 +135,38 @@
                 font-size: 1.2em;    
             }
         </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
+        <script>
+            $(document).ready(function () {
+                var jsonObj = [];
+                $("#block").click(function () {
+                    item = {};
+                    item ["id"] = "" + $('#block').val() + "";
+                    jsonObj.push(item);
+//                    alert(JSON.stringify(item));
+//                    $.post({
+//                        url: 'http://localhost:3000/api/block_unblock',
+//                        data: jsonObj[0],
+//                        success: function (data, textStatus, xhr) {
+//                            alert(data);
+//                        },
+//                        error: function (xhr, textStatus, errorThrown) {
+//                            alert('Error in Operation');
+//                        }
+//                    });
+//                    $.post("http://localhost:3000/api/block_unblock", jsonObj[0], function (data) {
+//                        alert(data);
+//                    });
+                    return false;
+                });
+                $("#delete").click(function () {
+                    alert("s salary is: ");
+                    return false;
+                });
+
+            }
+            );
+        </script>
     </head>
 
     <?PHP
@@ -175,13 +207,13 @@
         curl_close($curl);
         return $result;
     }
-    ?>
+    ?>      
 
     <body>
         <div class="preloader">
             <div class="lds-ripple">
                 <div class="lds-pos"></div>
-                <div class="lds-pos"></div>
+                <div class="lds-pos"></div> 
             </div>
         </div>
         <?php
@@ -190,7 +222,7 @@
             'id' => print_r($output['id'], TRUE)
         );
         $jsonData = json_encode($postData);
-        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/singleUser', json_encode($postData));
+        $get_data = callAPI('POST', $BASE_URL . 'singleUser', json_encode($postData));
         $response = json_decode($get_data, true);
         ?>
         <div id="main-wrapper">
@@ -255,9 +287,9 @@
                                                                     ?></h4></div>
                                                             <div class="col-md-3">
                                                                 <h4><a href="Phone_Number_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" class="btn-outline-light">
-                                                                    <!--<button type="button" class="btn btn-outline-light">-->
+                                                                        <!--<button type="button" class="btn btn-outline-light">-->
                                                                         See Other Numbers
-                                                                    <!--</button>-->
+                                                                        <!--</button>-->
                                                                     </a></h4>
                                                             </div>
                                                         </div>
@@ -373,9 +405,9 @@
                                                             <div class="col-md-3 text-white"><h4><?php echo count($response["userdata"][$i]["Contact_List"]); ?></h4></div>
                                                             <div class="col-md-3">
                                                                 <h4><a href="Contact_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" class="btn-outline-light">
-                                                                    <!--<button type="button" class="btn btn-outline-light">-->
+                                                                        <!--<button type="button" class="btn btn-outline-light">-->
                                                                         See Other Contacts
-                                                                    <!--</button>-->
+                                                                        <!--</button>-->
                                                                     </a></h4>
                                                             </div>
                                                         </div>
@@ -383,9 +415,9 @@
                                                             <div class="col-md-6 text-white"><h4>Total liked contacts : </h4></div>
                                                             <div class="col-md-3 text-white"><h4><?php echo count($response["userdata"][$i]["Like"]); ?></h4></div>
                                                             <div class="col-md-3 text-white "><h4><a href="Like_Contact_List.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" class="btn-outline-light">
-                                                                    <!--<button type="button" class="btn btn-outline-light">-->
+                                                                        <!--<button type="button" class="btn btn-outline-light">-->
                                                                         See Other Contacts
-                                                                    <!--</button>-->
+                                                                        <!--</button>-->
                                                                     </a></h4>
                                                             </div>
                                                         </div>
@@ -426,6 +458,20 @@
                                                             <div class="col-md-6 text-white"><h4>Notification Settings : </h4></div>
                                                             <div class="col-md-6 text-white"><h4><a href="UserNotification.php?id=<?php echo $response["userdata"][$i]["_id"] ?>" class="btn-outline-light">See Settings</a></h4></div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-12 col-xlg-3">
+                                                <div class="card card-hover">
+                                                    <div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-6 text-white text-right"><h4><button id="block" value="<?php echo $response["userdata"][$i]["_id"]; ?>" class="btn-outline-warning">Block User</button></h4></div>
+                                                            <div class="col-md-6 text-white"><h4><button id="delete" value="<?php echo $response["userdata"][$i]["_id"]; ?>" class="btn-outline-danger">Delete User</button></h4></div>
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>

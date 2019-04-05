@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+    <?php include './APIBaseURL.php'; ?>
+    <?php
+    parse_str($_SERVER['QUERY_STRING'], $output);
+    $postData = array(
+        'id' => print_r($output['id'], TRUE)
+    );
+    $jsonData = json_encode($postData);
+    $get_data = callAPI('POST', $BASE_URL . 'singleUserNumber', json_encode($postData));
+    $response = json_decode($get_data, true);
 
+    $my_file = 'data/contactSingleUser.txt';
+    $handle = fopen($my_file, 'w') or die('Cannot open file:  ' . $my_file);
+    fwrite($handle, json_encode($response));
+
+    //Block Number
+    function blockNumber() {
+        $postData = array(
+            'id' => $_REQUEST['id'],
+            'number' => $_REQUEST['number']
+        );
+        $jsonData = json_encode($postData);
+        $get_data = callAPI('POST', $BASE_URL . 'blockNumber', json_encode($postData));
+        $response1 = json_decode($get_data, true);
+    }
+    ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,36 +37,24 @@
         <link href="../../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
         <link href="../../dist/css/style.min.css" rel="stylesheet">
 
-        <script type="text/javascript" >
-//            function preventBack() {
-//                window.history.forward();
-//            }
-//            setTimeout("preventBack()", 0);
-//            window.onunload = function () {
-//                null
-//            };
-            function reloadPage() {
-                var data = window.location.href.split("?")[1];
-                var iddata = data.split("&")[1];
-                window.location = window.location.href.split("?")[0] + "?" + iddata;
-                
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
+        <script>
+            $(document).ready(function () {
+                var table = $('#example').DataTable({
+                    "ajax": "data/contactSingleUser.txt",
+                    "columnDefs": [{
+                            "targets": -1,
+                            "data": null,
+                            "defaultContent": "<button class='btn btn-outline-danger btn-sm'>Remove</button>"
+                        }]
+                });
+                $('#example tbody').on('click', 'button', function () {
+                    var data = table.row($(this).parents('tr')).data();
+                    alert(data[2]);
+                });
             }
-
-            function showMore() {
-                var showmore = document.getElementById("showmore").value;
-                alert(showmore);
-            }
-
-            function block() {
-                var block = document.getElementById("block").value;
-                alert(block);
-            }
-
-            function deleteUser() {
-                var deleteUser = document.getElementById("deleteUser").value;
-                alert(deleteUser);
-            }
-        </script> 
+            );
+        </script>
     </head>
 
     <?PHP
@@ -110,91 +122,25 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Contact List</h5>
+                                    <h5 class="card-title">User List</h5>
                                     <div class="table-responsive">
-                                        <table id="zero_config" class="table table-striped table-bordered">
+                                        <table id="example" class="table table-striped table-bordered">
                                             <thead style="background-color: skyblue;">
                                                 <tr>
-                                                    <th>Sr. No.</th>
+                                                    <th>Sr. No</th>
                                                     <th>Contry Code</th>
                                                     <th>Contact Number</th>
                                                     <th>Name</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-                                            <?php
-                                            parse_str($_SERVER['QUERY_STRING'], $output);
-                                            $postData = array(
-                                                'id' => print_r($output['id'], TRUE)
-                                            );
-                                            $jsonData = json_encode($postData);
-                                            $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/singleUser', json_encode($postData));
-                                            $response = json_decode($get_data, true);
-                                            ?>
-
-                                            <tbody>
-                                                <?php
-                                                if ($response != NIL) {
-                                                    for ($i = 0; $i < count($response["userdata"]); $i++) {
-
-                                                        for ($j = 0; $j < count($response["userdata"][$i]["Contact_List"]); $j++) {
-                                                            ?>
-                                                            <tr>
-                                                                <td><?php
-                                                                    echo $j + 1;
-                                                                    ?></td>
-                                                                <td><?php
-                                                                    echo $response["userdata"][$i]["Contact_List"][$j]["code"];
-                                                                    ?></td>
-                                                                <td><?php echo $response["userdata"][$i]["Contact_List"][$j]["number"]; ?></td>
-                                                                <td><?php echo $response["userdata"][$i]["Contact_List"][$j]["name"]; ?></td>
-                                                                <td>
-                                                                    <form>
-                                                                        <?php if ($response["userdata"][$i]["Contact_List"][$j]["isRemovedByAdmin"] == 0 && $response["userdata"][$i]["Contact_List"][$j]["isRemovedByUser"] == 0) { ?>
-                                                                            <input type="submit" name="action" value="Remove" class="btn btn-outline-danger btn-sm"/>
-                                                                        <?php } else { ?>
-                                                                            <input type="submit" name="action" value="Put Back" class="btn btn-outline-warning btn-sm"/>
-                                                                        <?php } ?>
-                                                                        <input type="hidden" value="<?php echo $response["userdata"][$i]["_id"]; ?>" name="id"/>
-                                                                        <input type="hidden" value="<?php echo $response["userdata"][$i]["Contact_List"][$j]["number"]; ?>" name="number"/>
-                                                                        <!--<input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>-->
-                                                                    </form>
-                                                                </td>
-                                                            </tr>
-
-                                                            <?php
-                                                        }
-                                                    }
-                                                }
-                                                ?>
-                                                <?php
-                                                if (isset($_REQUEST['action'])) {
-                                                    if ($_REQUEST['action'] == "Remove" || $_REQUEST['action'] == "Put Back") {
-                                                        $postData = array(
-                                                            'id' => $_REQUEST['id'],
-                                                            'number' => $_REQUEST['number']
-                                                        );
-                                                        $jsonData = json_encode($postData);
-//                                                        echo $jsonData;
-                                                        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/blockNumber', json_encode($postData));
-                                                        $response1 = json_decode($get_data, true);
-                                                        if ($response1["status"] == 1) {
-                                                            echo '<script type="text/javascript">',
-                                                            'reloadPage();',
-                                                            '</script>'
-                                                            ;
-                                                        }
-                                                    }
-                                                }
-                                                ?>
-                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <?php include 'footer.php'; ?>
             </div>
         </div>

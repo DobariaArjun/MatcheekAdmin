@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+    <?php include './APIBaseURL.php'; ?>
+    <?php
+    $get_data = callAPI('POST', $BASE_URL . 'allUser', false);
+    $response = json_decode($get_data, true);
 
+    $my_file = 'data/allUser.txt';
+    $handle = fopen($my_file, 'w') or die('Cannot open file:  ' . $my_file);
+    fwrite($handle, json_encode($response));
+    ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,37 +18,29 @@
         <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/fevicon.png">
         <title>Matcheek - Admin panel</title>
         <link rel="stylesheet" type="text/css" href="../../assets/extra-libs/multicheck/multicheck.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
         <link href="../../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
         <link href="../../dist/css/style.min.css" rel="stylesheet">
-
-        <script type="text/javascript" >
-//            function preventBack() {
-//                window.history.forward();
-//            }
-//            setTimeout("preventBack()", 0);
-//            window.onunload = function () {
-//                null
-//            };
-
-            function reloadPage() {
-                window.location = window.location.href.split("?")[0];
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
+        <script>
+            $(document).ready(function () {
+                var table = $('#example').DataTable({
+                    "ajax": "data/allUser.txt",
+                    "columnDefs": [{
+                            "targets": -1,
+                            "data": null,
+                            "defaultContent": "<button class='btn btn-outline-info btn-sm'>Show More</button>"
+                        }]
+                });
+                $('#example tbody').on('click', 'button', function () {
+                    var data = table.row($(this).parents('tr')).data();
+//                    alert(data[0] + "'s salary is: " + data[1]);
+                    window.location = 'ShowDetailsofUser.php?id='+data[0];
+                });
             }
-
-            function showMore() {
-                var showmore = document.getElementById("showmore").value;
-                alert(showmore);
-            }
-
-            function block() {
-                var block = document.getElementById("block").value;
-                alert(block);
-            }
-
-            function deleteUser() {
-                var deleteUser = document.getElementById("deleteUser").value;
-                alert(deleteUser);
-            }
-        </script> 
+            );
+        </script>
     </head>
 
     <?PHP
@@ -110,124 +110,19 @@
                                 <div class="card-body">
                                     <h5 class="card-title">User List</h5>
                                     <div class="table-responsive">
-                                        <table id="zero_config" class="table table-striped table-bordered">
+                                        <table id="example" class="table table-striped table-bordered">
                                             <thead style="background-color: skyblue;">
                                                 <tr>
+                                                    <th>Id</th>
                                                     <th>Name</th>
                                                     <th>Primary Number</th>
                                                     <th>Email Address</th>
-                                                    <!--<th>Number not recognized</th>-->
-                                                    <!--<th>Contact via app</th>-->
-                                                    <!--<th>Total contacts</th>-->
-                                                    <!--<th>Number remove ratio</th>-->
-                                                    <!--<th>No inapp purchase</th>-->
                                                     <th>Block</th>
                                                     <th>Online</th>
                                                     <th>Deleted</th>
                                                     <th>Action</th>
-
                                                 </tr>
                                             </thead>
-                                            <?php
-                                            $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/allUser', false);
-                                            $response = json_decode($get_data, true);
-                                            //echo $response["userdata"];
-                                            ?>
-
-                                            <tbody>
-                                                <?php
-                                                if (count($response["userdata"]) != 0) {
-                                                    for ($i = 0; $i < count($response["userdata"]); $i++) {
-                                                        ?>
-                                                        <tr>
-                                                            <td><?php
-                                                                if (count($response["userdata"][$i]["Username"]) > 0) {
-                                                                    echo $response["userdata"][$i]["Username"][count($response["userdata"][$i]["Username"]) - 1];
-                                                                } else {
-                                                                    echo '';
-                                                                }
-                                                                ?></td>
-                                                            <td><?php
-                                                                $number = $response["userdata"][$i]["Phone_Number"][0]["Number"];
-                                                                $code = $response["userdata"][$i]["Phone_Number"][0]["Contry_Code"];
-                                                                echo $code . "" . $number;
-                                                                ?></td>
-                                                            <td><?php echo $response["userdata"][$i]["Email"]["EmailAddress"]; ?></td>
-                                                            <td><?php
-                                                                if ($response["userdata"][$i]["is_Block"] == 0) {
-                                                                    echo "No";
-                                                                } else {
-                                                                    echo 'Yes';
-                                                                }
-                                                                ?></td>
-                                                            <td><?php
-                                                                if ($response["userdata"][$i]["is_Online"] == 0) {
-                                                                    echo "No";
-                                                                } else {
-                                                                    echo 'Yes';
-                                                                }
-                                                                ?></td>
-                                                            <td><?php
-                                                                if ($response["userdata"][$i]["is_Deleted"] == 0) {
-                                                                    echo "No";
-                                                                } else {
-                                                                    echo 'Yes';
-                                                                }
-                                                                ?></td>
-                                                            <td>
-                                                                <form>
-                                                                    <a href="ShowDetailsofUser.php?id=<?php echo $response["userdata"][$i]["_id"]; ?>">
-                                                                        <input type="button" name="action" value="Show more" class="btn btn-outline-info btn-sm"/>
-                                                                    </a>
-
-                                                                    <?php if ($response["userdata"][$i]["is_Block"] == 0) { ?>
-                                                                        <input type="submit" name="action" value="Block" class="btn btn-outline-warning btn-sm"/>
-                                                                    <?php } else { ?>
-                                                                        <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
-                                                                    <?php } ?>
-                                                                    <input type="hidden" value="<?php echo $response["userdata"][$i]["_id"]; ?>" name="id"/>
-                                                                    <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
-                                                                </form>
-
-                                                            </td>
-                                                        </tr>
-                                                    <?php
-                                                    }
-                                                }
-                                                ?>
-                                                <?php
-                                                if (isset($_REQUEST['action'])) {
-                                                    if ($_REQUEST['action'] == "Block" || $_REQUEST['action'] == "Unblock") {
-                                                        $postData = array(
-                                                            'id' => $_REQUEST['id']
-                                                        );
-                                                        $jsonData = json_encode($postData);
-                                                        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/block_unblock', json_encode($postData));
-                                                        $response1 = json_decode($get_data, true);
-                                                        if ($response1["status"] == 1) {
-                                                            echo '<script type="text/javascript">',
-                                                            'reloadPage();',
-                                                            '</script>'
-                                                            ;
-                                                        }
-                                                    }
-                                                    if ($_REQUEST['action'] == "Delete") {
-                                                        $postData = array(
-                                                            'id' => $_REQUEST['id']
-                                                        );
-                                                        $jsonData = json_encode($postData);
-                                                        $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/deleteUser', json_encode($postData));
-                                                        $response1 = json_decode($get_data, true);
-                                                        if ($response1["status"] == 1) {
-                                                            echo '<script type="text/javascript">',
-                                                            'reloadPage();',
-                                                            '</script>'
-                                                            ;
-                                                        }
-                                                    }
-                                                }
-                                                ?>
-                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -235,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-<?php include 'footer.php'; ?>
+                <?php include 'footer.php'; ?>
             </div>
         </div>
         <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
@@ -245,13 +140,6 @@
         <script src="../../dist/js/sidebarmenu.js"></script>
         <script src="../../dist/js/custom.min.js"></script>
         <script src="../../assets/extra-libs/DataTables/datatables.min.js"></script>
-        <script>
-            /****************************************
-             *       Basic Table                   *
-             ****************************************/
-            $('#zero_config').DataTable();
-        </script>
-
     </body>
 
 </html>

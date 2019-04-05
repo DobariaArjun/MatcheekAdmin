@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-
+<?php include './APIBaseURL.php'; ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,14 +14,6 @@
         <link href="../../dist/css/style.min.css" rel="stylesheet">
 
         <script type="text/javascript" >
-//            function preventBack() {
-//                window.history.forward();
-//            }
-//            setTimeout("preventBack()", 0);
-//            window.onunload = function () {
-//                null
-//            };
-
             function showMore() {
                 var showmore = document.getElementById("showmore").value;
                 alert(showmore);
@@ -122,7 +114,7 @@
                                                 'id' => print_r($output['id'], TRUE)
                                             );
                                             $jsonData = json_encode($postData);
-                                            $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/GetLikeContact', json_encode($postData));
+                                            $get_data = callAPI('POST', $BASE_URL.'GetLikeContact', json_encode($postData));
                                             $response = json_decode($get_data, true);
                                             ?>
 
@@ -177,7 +169,7 @@
 //                                                                'id' => $response["userdata"][$i]["_id"]
 //                                                            );
 //                                                            $jsonData = json_encode($postData);
-//                                                            $get_data = callAPI('POST', 'https://switlover.herokuapp.com/api/block_unblock', json_encode($postData));
+//                                                            $get_data = callAPI('POST', $BASE_URL+'block_unblock', json_encode($postData));
 //                                                        }
 //                                                    }
                                                     }
