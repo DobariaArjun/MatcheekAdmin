@@ -45,12 +45,51 @@
                     "columnDefs": [{
                             "targets": -1,
                             "data": null,
-                            "defaultContent": "<button class='btn btn-outline-danger btn-sm'>Remove</button>"
+                            "defaultContent": "<button id='remove' class='btn btn-outline-danger btn-sm'>Remove</button> <button id='put' class='btn btn-outline-warning btn-sm'>Put Back</button>"
                         }]
                 });
-                $('#example tbody').on('click', 'button', function () {
+                $('#example tbody').on('click', '#remove', function () {
                     var data = table.row($(this).parents('tr')).data();
-                    alert(data[2]);
+//                    alert(data[4] == "No");
+//                    if (data[4] == "Yes" && data[5] == "Yes")
+//                    {
+//                        $("#remove").hide();
+//                        $("#put").show();
+//                    }
+//                    if (data[4] == "No" && data[5] == "No")
+//                    {
+//                        $("#put").hide();
+//                        $("#remove").show();
+//                    }
+//                    var jsonObj = [];
+                    var dataURL = window.location.href.split("id=")[1];
+                    
+//                    item = {};
+//                    item["id"] = dataURL;
+//                    item ["number"] = data[2];
+//                    jsonObj.push(item);
+//                    alert(jsonObj[0]["id"]);
+                    $.ajax({
+                        url: 'http://localhost:3000/api/blockNumber',
+                        type: 'POST',
+                        data: {id: dataURL, number: data[2]},
+                        complete: function ()
+                        {
+                            alert();
+//                            if (data[4] == "Yes" && data[5] == "Yes")
+//                            {
+//                                $("#remove").hide();
+//                                $("#put").show();
+//                            }
+//                            if (data[4] == "No" && data[5] == "No")
+//                            {
+//                                $("#put").hide();
+//                                $("#remove").show();
+//                            }
+                        }
+                    });
+
+                    return false;
                 });
             }
             );
@@ -131,6 +170,8 @@
                                                     <th>Contry Code</th>
                                                     <th>Contact Number</th>
                                                     <th>Name</th>
+                                                    <th>Is Removed By User</th>
+                                                    <th>Is Removed By Admin</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
