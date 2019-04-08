@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<?php include './APIBaseURL.php'; ?>
+    <?php include './APIBaseURL.php'; ?>
+    <?php
+    parse_str($_SERVER['QUERY_STRING'], $output);
+    $postData = array(
+        'id' => print_r($output['id'], TRUE)
+    );
+    $jsonData = json_encode($postData);
+    $get_data = callAPI('POST', $BASE_URL . 'GetLikeContact', json_encode($postData));
+    $response = json_decode($get_data, true);
+
+    $my_file = 'data/contactForLike.txt';
+    $handle = fopen($my_file, 'w') or die('Cannot open file:  ' . $my_file);
+    fwrite($handle, json_encode($response));
+    ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,22 +26,15 @@
         <link href="../../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
         <link href="../../dist/css/style.min.css" rel="stylesheet">
 
-        <script type="text/javascript" >
-            function showMore() {
-                var showmore = document.getElementById("showmore").value;
-                alert(showmore);
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
+        <script>
+            $(document).ready(function () {
+                var table = $('#example').DataTable({
+                    "ajax": "data/contactForLike.txt",
+                });
             }
-
-            function block() {
-                var block = document.getElementById("block").value;
-                alert(block);
-            }
-
-            function deleteUser() {
-                var deleteUser = document.getElementById("deleteUser").value;
-                alert(deleteUser);
-            }
-        </script> 
+            );
+        </script>
     </head>
 
     <?PHP
@@ -40,7 +46,7 @@
             case "POST":
                 curl_setopt($curl, CURLOPT_POST, 1);
                 if ($data)
-                    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+                    curl_setopt($curl, CURLOPT_POSTFIELDS, $data)   ;
                 break;
             case "PUT":
                 curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
@@ -98,84 +104,17 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Contact List</h5>
                                     <div class="table-responsive">
-                                        <table id="zero_config" class="table table-striped table-bordered">
+                                        <table id="example" class="table table-striped table-bordered">
                                             <thead style="background-color: skyblue;">
                                                 <tr>
                                                     <th>Sr. No.</th>
                                                     <th>Contry Code</th>
                                                     <th>Contact Number</th>
                                                     <th>Name</th>
-                                                    <th>Action</th>
+                                                    <th>Is Removed By User</th>
+                                                    <th>Is Removed By Admin</th>
                                                 </tr>
                                             </thead>
-                                            <?php
-                                            parse_str($_SERVER['QUERY_STRING'], $output);
-                                            $postData = array(
-                                                'id' => print_r($output['id'], TRUE)
-                                            );
-                                            $jsonData = json_encode($postData);
-                                            $get_data = callAPI('POST', $BASE_URL.'GetLikeContact', json_encode($postData));
-                                            $response = json_decode($get_data, true);
-                                            ?>
-
-                                            <tbody>
-                                                <?php
-                                                $j = 0;
-                                                for ($i = 0; $i < count($response["userdata"]); $i++) {
-                                                    if ($response["userdata"][$i]["isLiked"] == 1) {
-                                                        $j += 1;
-                                                        ?>
-                                                        <tr>
-                                                            <td><?php
-                                                                echo $j;
-                                                                ?></td>
-                                                            <td><?php
-                                                                if ($response["userdata"][$i]["isLiked"] == 1) {
-                                                                    echo $response["userdata"][$i]["code"];
-                                                                }
-                                                                ?></td>
-                                                            <td><?php
-                                                                if ($response["userdata"][$i]["isLiked"] == 1) {
-                                                                    echo $response["userdata"][$i]["number"];
-                                                                }
-                                                                ?></td>
-                                                            <td><?php
-                                                                if ($response["userdata"][$i]["isLiked"] == 1) {
-                                                                    echo $response["userdata"][$i]["name"];
-                                                                }
-                                                                ?></td>
-                                                            <td>
-                                                                <form>
-                                                                    <?php
-                                                                    if ($response["userdata"][$i]["isLiked"] == 1) {
-
-                                                                        if ($response["userdata"][$i]["isRemovedByAdmin"] == 0 && $response["userdata"][$i]["isRemovedByUser"] == 0) {
-                                                                            ?>
-                                                                            <input type="submit" name="action" value="Block" class="btn btn-outline-warning btn-sm"/>
-                                                                        <?php } else { ?>
-                                                                            <input type="submit" name="action" value="Unblock" class="btn btn-outline-warning btn-sm"/>
-                                                                            <?php
-                                                                        }
-                                                                    }
-                                                                    ?>
-                                                                    <input type="submit" name="action" value="Delete" class="btn btn-outline-danger btn-sm"/>
-                                                                </form>
-                                                            </td>
-                                                        </tr>
-                                                        <?php
-//                                                    if (isset($_REQUEST['action'])) {
-//                                                        if ($_REQUEST['action'] == "Block" || $_REQUEST['action'] == "Unblock") {
-//                                                            $postData = array(
-//                                                                'id' => $response["userdata"][$i]["_id"]
-//                                                            );
-//                                                            $jsonData = json_encode($postData);
-//                                                            $get_data = callAPI('POST', $BASE_URL+'block_unblock', json_encode($postData));
-//                                                        }
-//                                                    }
-                                                    }
-                                                }
-                                                ?>
-                                            </tbody>
                                         </table>
                                     </div>
                                 </div>

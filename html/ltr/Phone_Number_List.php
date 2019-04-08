@@ -31,16 +31,21 @@
             $(document).ready(function () {
                 var table = $('#example').DataTable({
                     "ajax": "data/phoneNumber.txt",
-                    "columnDefs": [{
-                            "targets": -1,
-                            "data": null,
-                            "defaultContent": "<button class='btn btn-outline-danger btn-sm'>Block</button>"
-                        }]
                 });
                 $('#example tbody').on('click', 'button', function () {
                     var data = table.row($(this).parents('tr')).data();
-                    alert(data[2]);
-//                    window.location = 'ShowDetailsofUser.php?id=' + data[0];
+                    var dataURL = window.location.href.split("id=")[1];
+                    $.ajax({
+                        url: '',
+                        type: 'POST',
+                        data: {id: dataURL, number: data[2]},
+                        complete: function ()
+                        {
+                            window.location = window.location;
+                        }
+                    });
+
+                    return false;
                 });
             }
             );
@@ -123,7 +128,6 @@
                                                     <th>Location</th>
                                                     <th>Verified</th>
                                                     <th>Is Over Verified</th>
-                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                         </table>

@@ -13,17 +13,6 @@
     $my_file = 'data/contactSingleUser.txt';
     $handle = fopen($my_file, 'w') or die('Cannot open file:  ' . $my_file);
     fwrite($handle, json_encode($response));
-
-    //Block Number
-    function blockNumber() {
-        $postData = array(
-            'id' => $_REQUEST['id'],
-            'number' => $_REQUEST['number']
-        );
-        $jsonData = json_encode($postData);
-        $get_data = callAPI('POST', $BASE_URL . 'blockNumber', json_encode($postData));
-        $response1 = json_decode($get_data, true);
-    }
     ?>
     <head>
         <meta charset="utf-8">
@@ -42,54 +31,26 @@
             $(document).ready(function () {
                 var table = $('#example').DataTable({
                     "ajax": "data/contactSingleUser.txt",
-                    "columnDefs": [{
-                            "targets": -1,
-                            "data": null,
-                            "defaultContent": "<button id='remove' class='btn btn-outline-danger btn-sm'>Remove</button> <button id='put' class='btn btn-outline-warning btn-sm'>Put Back</button>"
-                        }]
                 });
+                
                 $('#example tbody').on('click', '#remove', function () {
                     var data = table.row($(this).parents('tr')).data();
-//                    alert(data[4] == "No");
-//                    if (data[4] == "Yes" && data[5] == "Yes")
-//                    {
-//                        $("#remove").hide();
-//                        $("#put").show();
-//                    }
-//                    if (data[4] == "No" && data[5] == "No")
-//                    {
-//                        $("#put").hide();
-//                        $("#remove").show();
-//                    }
-//                    var jsonObj = [];
                     var dataURL = window.location.href.split("id=")[1];
-                    
-//                    item = {};
-//                    item["id"] = dataURL;
-//                    item ["number"] = data[2];
-//                    jsonObj.push(item);
-//                    alert(jsonObj[0]["id"]);
                     $.ajax({
                         url: 'http://localhost:3000/api/blockNumber',
                         type: 'POST',
                         data: {id: dataURL, number: data[2]},
                         complete: function ()
                         {
-                            alert();
-//                            if (data[4] == "Yes" && data[5] == "Yes")
-//                            {
-//                                $("#remove").hide();
-//                                $("#put").show();
-//                            }
-//                            if (data[4] == "No" && data[5] == "No")
-//                            {
-//                                $("#put").hide();
-//                                $("#remove").show();
-//                            }
+                            window.location = window.location;
                         }
                     });
 
                     return false;
+                });
+
+                $('#example tbody').on('click', '#put', function () {
+                    alert("Put Back")
                 });
             }
             );

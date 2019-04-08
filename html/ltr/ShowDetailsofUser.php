@@ -147,35 +147,34 @@
                     item ["id"] = data;
                     jsonObj.push(item);
                     var isBlock = $('#block').val() ;
-//                    isBlock = "'"+isBlock+"'";
-//                    if(isBlock){isBlock = 'true'}else{isBlock = 'false'}
-//                    alert(JSON.stringify(item));
                     $.ajax({
                         url: 'http://localhost:3000/api/block_unblock',
                         type: 'POST',
                         data: jsonObj[0],
                         complete: function ()
                         {
-                            if (isBlock == 'true' || isBlock == true)
-                            {       
-                                $("#block").html('Unblock User');
-                                $('#block').attr('value','false');
-                                $("#isBlocked").html('<h4>Yes</h4>');
-                                
-                            }
-                            if(isBlock == 'false' || isBlock == false)
-                            {
-                                $("#block").html('Block User');
-                                $('#block').attr('value','true');
-                                $("#isBlocked").html('<h4>No</h4>');
-                            }
+                            window.location = window.location;
                         }
                     });
                     
                     return false;
                 });
                 $("#delete").click(function () {
-                    alert("s salary is: ");
+                    var data = window.location.href.split("id=")[1];
+                    item = {};
+                    item ["id"] = data;
+                    jsonObj.push(item);
+                    var isDelete = $('#delete').val() ;
+                    $.ajax({
+                        url: 'http://localhost:3000/api/deleteUser',
+                        type: 'POST',
+                        data: jsonObj[0],
+                        complete: function ()
+                        {
+                            window.location = window.location;
+                        }
+                    });
+                    
                     return false;
                 });
 
@@ -352,8 +351,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
                                         <div class="row">
                                             <div class="col-md-12 col-lg-6 col-xlg-3">
                                                 <div class="card card-hover">
@@ -398,7 +395,7 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-6 text-white"><h4>Is deleted? : </h4></div>
-                                                            <div class="col-md-6 text-white"><h4><?php
+                                                            <div id="isDeleted" class="col-md-6 text-white"><h4><?php
                                                                     if ($response["userdata"][$i]["is_Deleted"] == 0) {
                                                                         echo "No";
                                                                     } else {
@@ -485,27 +482,27 @@
                                                         <div class="row">
                                                             
                                                             <?php
-                                                            if ($response["userdata"][$i]["is_Block"] == 0) {
-                                                                ?>
-                                                                <div class="col-md-6 text-white text-right"><h4><button id="block" value="false" class="btn-outline-warning">Block User</button></h4></div>
-                                                                <?php
-                                                            } else {
-                                                                ?>
-                                                                <div class="col-md-6 text-white text-right"><h4><button id="block" value="true" class="btn-outline-warning">Unblock User</button></h4></div>
-                                                                <?php
-                                                            }
+                                                                if ($response["userdata"][$i]["is_Block"] == 0) {
+                                                                    ?>
+                                                                    <div class="col-md-6 text-white text-right"><h4><button id="block" value="false" class="btn-outline-warning">Block User</button></h4></div>
+                                                                    <?php
+                                                                } else {
+                                                                    ?>
+                                                                    <div class="col-md-6 text-white text-right"><h4><button id="block" value="true" class="btn-outline-warning">Unblock User</button></h4></div>
+                                                                    <?php
+                                                                }
 
 
-                                                            if ($response["userdata"][$i]["is_Deleted"] == 0) {
+                                                                if ($response["userdata"][$i]["is_Deleted"] == 0) {
+                                                                    ?>
+                                                                    <div class="col-md-6 text-white"><h4><button id="delete" value="false" class="btn-outline-danger">Delete User</button></h4></div>
+                                                                    <?php
+                                                                } else {
+                                                                    ?>
+                                                                    <div class="col-md-6 text-white"><h4><button id="delete" value="true" class="btn-outline-danger">Put Back User</button></h4></div>
+                                                                    <?php
+                                                                }
                                                                 ?>
-                                                                <div class="col-md-6 text-white"><h4><button id="delete" value="<?php echo $response["userdata"][$i]["_id"]; ?>" class="btn-outline-danger">Delete User</button></h4></div>
-                                                                <?php
-                                                            } else {
-                                                                ?>
-                                                                <div class="col-md-6 text-white"><h4><button id="delete" value="<?php echo $response["userdata"][$i]["_id"]; ?>" class="btn-outline-danger">Put Back User</button></h4></div>
-                                                                            <?php
-                                                                        }
-                                                                        ?>
                                                         </div>
 
                                                     </div>
