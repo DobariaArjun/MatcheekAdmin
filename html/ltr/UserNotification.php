@@ -60,11 +60,6 @@
                         matcheek_1 = 1;
                     }
                     var matcheek_2 = $.trim($('#matcheek_2').text());
-                    if(matcheek_1 == "On"){
-                        matcheek_1 = 0;
-                    }else{
-                        matcheek_1 = 1;
-                    }
                     var matcheek_3 = $.trim($('#matcheek_3').text());
                     var matcheek_4 = $.trim($('#matcheek_4').text());
                     var matcheek_5 = $.trim($('#matcheek_5').text());
