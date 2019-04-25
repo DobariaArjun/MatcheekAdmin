@@ -12,79 +12,141 @@
         <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/fevicon.png">
         <title>Matcheek - Admin panel</title>
         <link href="../../dist/css/style.min.css" rel="stylesheet">
-
-        <!--    data: {userID: dataresult[0]["_id"],
-                matcheek: {
-                play_sound_for_every_notification: 1,
-                play_sound_for_every_message: 1,
-                likes: 1,
-                matches: 1,
-                messages: 1,
-                power_of_time: 1,
-                promotions: 1
-                },
-                phone: {
-                play_sound_for_every_notification: 1,
-                play_sound_for_every_message: 1,
-                likes: 1,
-                matches: 1,
-                messages: 1,
-                power_of_time: 1,
-                promotions: 1
-                },
-                email: {
-                frequency: {
-                every_notification: 0,
-                twice_a_day: 0,
-                once_a_day: 1,
-                once_a_week: 0,
-                once_a_month: 0
-                },
-                newsletter: 1,
-                promotions: 1,
-                likes: 1,
-                matches: 1,
-                messages: 1,
-                power_of_time: 1
-                }
-                }}-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
         <script>
             $(document).ready(function () {
                 var id = window.location.href.split("id=")[1];
                 $("#matcheek_1").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
-                    if(matcheek_1 == "On"){
+                    if (matcheek_1 == "On") {
                         matcheek_1 = 0;
-                    }else{
+                    } else {
                         matcheek_1 = 1;
                     }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
-                    if(matcheek_1 == "On"){
-                        matcheek_1 = 0;
-                    }else{
-                        matcheek_1 = 1;
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
                     }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -132,32 +194,135 @@
                 });
                 $("#matcheek_2").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
-                    if(matcheek_2 == "On"){
-                        matcheek2 = 0;
-                    }else{
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 0;
+                    } else {
                         matcheek_2 = 1;
                     }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -205,32 +370,135 @@
                 });
                 $("#matcheek_3").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
-                    if(matcheek_3 == "On"){
+                    if (matcheek_3 == "On") {
                         matcheek_3 = 0;
-                    }else{
+                    } else {
                         matcheek_3 = 1;
                     }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -278,32 +546,135 @@
                 });
                 $("#matcheek_4").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
-                    if(matcheek_4 == "On"){
+                    if (matcheek_4 == "On") {
                         matcheek_4 = 0;
-                    }else{
+                    } else {
                         matcheek_4 = 1;
                     }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -351,32 +722,135 @@
                 });
                 $("#matcheek_5").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
-                    if(matcheek_5 == "On"){
+                    if (matcheek_5 == "On") {
                         matcheek_5 = 0;
-                    }else{
+                    } else {
                         matcheek_5 = 1;
                     }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -424,32 +898,135 @@
                 });
                 $("#matcheek_6").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
-                    if(matcheek_6 == "On"){
+                    if (matcheek_6 == "On") {
                         matcheek_6 = 0;
-                    }else{
+                    } else {
                         matcheek_6 = 1;
                     }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -497,32 +1074,135 @@
                 });
                 $("#matcheek_7").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
-                    if(matcheek_7 == "On"){
+                    if (matcheek_7 == "On") {
                         matcheek_7 = 0;
-                    }else{
+                    } else {
                         matcheek_7 = 1;
                     }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -570,32 +1250,135 @@
                 });
                 $("#phone_1").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
-                    if(phone_1 == "On"){
+                    if (phone_1 == "On") {
                         phone_1 = 0;
-                    }else{
+                    } else {
                         phone_1 = 1;
                     }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -643,32 +1426,135 @@
                 });
                 $("#phone_2").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
-                    if(phone_2 == "On"){
+                    if (phone_2 == "On") {
                         phone_2 = 0;
-                    }else{
+                    } else {
                         phone_2 = 1;
                     }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -716,32 +1602,135 @@
                 });
                 $("#phone_3").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
-                    if(phone_3 == "On"){
+                    if (phone_3 == "On") {
                         phone_3 = 0;
-                    }else{
+                    } else {
                         phone_3 = 1;
                     }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -789,32 +1778,135 @@
                 });
                 $("#phone_4").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
-                    if(phone_4 == "On"){
+                    if (phone_4 == "On") {
                         phone_4 = 0;
-                    }else{
+                    } else {
                         phone_4 = 1;
                     }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -862,32 +1954,135 @@
                 });
                 $("#phone_5").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
-                    if(phone_5 == "On"){
+                    if (phone_5 == "On") {
                         phone_5 = 0;
-                    }else{
+                    } else {
                         phone_5 = 1;
                     }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -935,32 +2130,135 @@
                 });
                 $("#phone_6").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
-                    if(phone_6 == "On"){
+                    if (phone_6 == "On") {
                         phone_6 = 0;
-                    }else{
+                    } else {
                         phone_6 = 1;
                     }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -1008,32 +2306,135 @@
                 });
                 $("#phone_7").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
-                    if(phone_7 == "On"){
+                    if (phone_7 == "On") {
                         phone_7 = 0;
-                    }else{
+                    } else {
                         phone_7 = 1;
                     }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -1079,34 +2480,338 @@
                     });
                     return false;
                 });
+                $("#email_1").click(function () {
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
+                    var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
+                    var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
+                    var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
+                    var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
+                    var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
+                    var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
+                    var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
+                    var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
+                    var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
+                    var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
+                    var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
+                    var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
+                    var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
+                    var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
+                    } else {
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
+                    }
+                    var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
+                    var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
+                    var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
+                    var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
+                    var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
+                    var email_7 = $.trim($('#email_7').text());
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
+                    $.ajax({
+                        url: 'http://localhost:3000/api/SetNotificationadmin',
+                        type: 'POST',
+                        data: {data: {userID: id,
+                                matcheek: {
+                                    play_sound_for_every_notification: matcheek_1,
+                                    play_sound_for_every_message: matcheek_2,
+                                    likes: matcheek_3,
+                                    matches: matcheek_4,
+                                    messages: matcheek_5,
+                                    power_of_time: matcheek_6,
+                                    promotions: matcheek_7
+                                },
+                                phone: {
+                                    play_sound_for_every_notification: phone_1,
+                                    play_sound_for_every_message: phone_2,
+                                    likes: phone_3,
+                                    matches: phone_4,
+                                    messages: phone_5,
+                                    power_of_time: phone_6,
+                                    promotions: phone_7
+                                },
+                                email: {
+                                    frequency: {
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
+                                    },
+                                    newsletter: email_2,
+                                    promotions: email_3,
+                                    likes: email_4,
+                                    matches: email_5,
+                                    messages: email_6,
+                                    power_of_time: email_7
+                                }
+                            }},
+                        complete: function ()
+                        {
+                            window.location = window.location;
+                        }
+                    });
+                    return false;
+                });
                 $("#email_2").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
-                    if(email_2 == "On"){
+                    if (email_2 == "On") {
                         email_2 = 0;
-                    }else{
+                    } else {
                         email_2 = 1;
                     }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -1154,32 +2859,135 @@
                 });
                 $("#email_3").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
-                    if(email_3 == "On"){
+                    if (email_3 == "On") {
                         email_3 = 0;
-                    }else{
+                    } else {
                         email_3 = 1;
                     }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -1227,32 +3035,135 @@
                 });
                 $("#email_4").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
-                    if(email_4 == "On"){
+                    if (email_4 == "On") {
                         email_4 = 0;
-                    }else{
+                    } else {
                         email_4 = 1;
                     }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -1300,32 +3211,135 @@
                 });
                 $("#email_5").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
-                    if(email_5 == "On"){
+                    if (email_5 == "On") {
                         email_5 = 0;
-                    }else{
+                    } else {
                         email_5 = 1;
                     }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -1373,32 +3387,135 @@
                 });
                 $("#email_6").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
-                    if(email_6 == "On"){
+                    if (email_6 == "On") {
                         email_6 = 0;
-                    }else{
+                    } else {
                         email_6 = 1;
                     }
                     var email_7 = $.trim($('#email_7').text());
-                    
+                    if (email_7 == "On") {
+                        email_7 = 1;
+                    } else {
+                        email_7 = 0;
+                    }
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -1446,32 +3563,135 @@
                 });
                 $("#email_7").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
+                    if (matcheek_1 == "On") {
+                        matcheek_1 = 1;
+                    } else {
+                        matcheek_1 = 0;
+                    }
+//                    alert(matcheek_1)
                     var matcheek_2 = $.trim($('#matcheek_2').text());
+                    if (matcheek_2 == "On") {
+                        matcheek_2 = 1;
+                    } else {
+                        matcheek_2 = 0;
+                    }
+//                    alert(matcheek_2)
                     var matcheek_3 = $.trim($('#matcheek_3').text());
+                    if (matcheek_3 == "On") {
+                        matcheek_3 = 1;
+                    } else {
+                        matcheek_3 = 0;
+                    }
+//                    alert(matcheek_3)
                     var matcheek_4 = $.trim($('#matcheek_4').text());
+                    if (matcheek_4 == "On") {
+                        matcheek_4 = 1;
+                    } else {
+                        matcheek_4 = 0;
+                    }
                     var matcheek_5 = $.trim($('#matcheek_5').text());
+                    if (matcheek_5 == "On") {
+                        matcheek_5 = 1;
+                    } else {
+                        matcheek_5 = 0;
+                    }
                     var matcheek_6 = $.trim($('#matcheek_6').text());
+                    if (matcheek_6 == "On") {
+                        matcheek_6 = 1;
+                    } else {
+                        matcheek_6 = 0;
+                    }
                     var matcheek_7 = $.trim($('#matcheek_7').text());
+                    if (matcheek_7 == "On") {
+                        matcheek_7 = 1;
+                    } else {
+                        matcheek_7 = 0;
+                    }
                     var phone_1 = $.trim($('#phone_1').text());
+                    if (phone_1 == "On") {
+                        phone_1 = 1;
+                    } else {
+                        phone_1 = 0;
+                    }
                     var phone_2 = $.trim($('#phone_2').text());
+                    if (phone_2 == "On") {
+                        phone_2 = 1;
+                    } else {
+                        phone_2 = 0;
+                    }
                     var phone_3 = $.trim($('#phone_3').text());
+                    if (phone_3 == "On") {
+                        phone_3 = 1;
+                    } else {
+                        phone_3 = 0;
+                    }
                     var phone_4 = $.trim($('#phone_4').text());
+                    if (phone_4 == "On") {
+                        phone_4 = 1;
+                    } else {
+                        phone_4 = 0;
+                    }
                     var phone_5 = $.trim($('#phone_5').text());
+                    if (phone_5 == "On") {
+                        phone_5 = 1;
+                    } else {
+                        phone_5 = 0;
+                    }
                     var phone_6 = $.trim($('#phone_6').text());
+                    if (phone_6 == "On") {
+                        phone_6 = 1;
+                    } else {
+                        phone_6 = 0;
+                    }
                     var phone_7 = $.trim($('#phone_7').text());
+                    if (phone_7 == "On") {
+                        phone_7 = 1;
+                    } else {
+                        phone_7 = 0;
+                    }
                     var email_1 = $.trim($('#email_1').text());
+                    if (email_1 == "On") {
+                        email_1 = 1;
+                    } else {
+                        email_1 = 0;
+                    }
                     var email_2 = $.trim($('#email_2').text());
+                    if (email_2 == "On") {
+                        email_2 = 1;
+                    } else {
+                        email_2 = 0;
+                    }
                     var email_3 = $.trim($('#email_3').text());
+                    if (email_3 == "On") {
+                        email_3 = 1;
+                    } else {
+                        email_3 = 0;
+                    }
                     var email_4 = $.trim($('#email_4').text());
+                    if (email_4 == "On") {
+                        email_4 = 1;
+                    } else {
+                        email_4 = 0;
+                    }
                     var email_5 = $.trim($('#email_5').text());
+                    if (email_5 == "On") {
+                        email_5 = 1;
+                    } else {
+                        email_5 = 0;
+                    }
                     var email_6 = $.trim($('#email_6').text());
+                    if (email_6 == "On") {
+                        email_6 = 1;
+                    } else {
+                        email_6 = 0;
+                    }
                     var email_7 = $.trim($('#email_7').text());
-                    if(email_7 == "On"){
+                    if (email_7 == "On") {
                         email_7 = 0;
-                    }else{
+                    } else {
                         email_7 = 1;
                     }
-                    
+
                     $.ajax({
                         url: 'http://localhost:3000/api/SetNotificationadmin',
                         type: 'POST',
@@ -1517,6 +3737,7 @@
                     });
                     return false;
                 });
+
             }
             );
         </script>
@@ -1791,7 +4012,16 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"> <h4>Frequency : </h4> </div> 
-                                                        <div class="col-md-6 text-white btn-success" id="email_1"> <h4>Once a week</h4> </div>
+                                                        <div class="col-md-3 text-white"> 
+                                                            <select class="text-white bg-success btn-outline-light text-center" id="dd">
+                                                                <option value="Every Notification" <?php if ($response1["userdata"][0]["email"]["frequency"]["every_notification"] == 1) { ?>selected<?php } ?>>Every Notification</option>
+                                                                <option value="Twice a day" <?php if ($response1["userdata"][0]["email"]["frequency"]["twice_a_day"] == 1) { ?>selected<?php } ?>>Twice a day</option>
+                                                                <option value="Once a day" <?php if ($response1["userdata"][0]["email"]["frequency"]["once_a_day"] == 1) { ?>selected<?php } ?>>Once a day</option>
+                                                                <option value="Once a week" <?php if ($response1["userdata"][0]["email"]["frequency"]["once_a_week"] == 1) { ?>selected<?php } ?>>Once a week</option>
+                                                                <option value="Once a month" <?php if ($response1["userdata"][0]["email"]["frequency"]["once_a_month"] == 1) { ?>selected<?php } ?>>Once a month</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-3 text-white btn-success" id="email_1"> <h4>Change</h4></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Newsletters : </h4></div>

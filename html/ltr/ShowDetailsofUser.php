@@ -140,13 +140,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
         <script>
             $(document).ready(function () {
-                var jsonObj = [];
                 $("#block").click(function () {
                     var data = window.location.href.split("id=")[1];
+                    var jsonObj = [];
                     item = {};
                     item ["id"] = data;
                     jsonObj.push(item);
-                    var isBlock = $('#block').val() ;
                     $.ajax({
                         url: 'http://localhost:3000/api/block_unblock',
                         type: 'POST',
@@ -156,28 +155,27 @@
                             window.location = window.location;
                         }
                     });
-                    
+
                     return false;
                 });
                 $("#delete").click(function () {
-                    var data = window.location.href.split("id=")[1];
-                    item = {};
-                    item ["id"] = data;
-                    jsonObj.push(item);
-                    var isDelete = $('#delete').val() ;
+                    var data1 = window.location.href.split("id=")[1];
+                    var jsonObj1 = [];
+                    item1 = {};
+                    item1 ["id"] = data1;
+                    jsonObj1.push(item1);
                     $.ajax({
-                        url: 'http://localhost:3000/api/deleteUser',
+                        url: 'http://localhost:3000/api/deleteUserAdmin',
                         type: 'POST',
-                        data: jsonObj[0],
+                        data: jsonObj1[0],
                         complete: function ()
                         {
                             window.location = window.location;
                         }
                     });
-                    
+
                     return false;
                 });
-
             }
             );
         </script>
@@ -480,29 +478,29 @@
                                                     <div>
 
                                                         <div class="row">
-                                                            
+
                                                             <?php
-                                                                if ($response["userdata"][$i]["is_Block"] == 0) {
-                                                                    ?>
-                                                                    <div class="col-md-6 text-white text-right"><h4><button id="block" value="false" class="btn-outline-warning">Block User</button></h4></div>
-                                                                    <?php
-                                                                } else {
-                                                                    ?>
-                                                                    <div class="col-md-6 text-white text-right"><h4><button id="block" value="true" class="btn-outline-warning">Unblock User</button></h4></div>
-                                                                    <?php
-                                                                }
-
-
-                                                                if ($response["userdata"][$i]["is_Deleted"] == 0) {
-                                                                    ?>
-                                                                    <div class="col-md-6 text-white"><h4><button id="delete" value="false" class="btn-outline-danger">Delete User</button></h4></div>
-                                                                    <?php
-                                                                } else {
-                                                                    ?>
-                                                                    <div class="col-md-6 text-white"><h4><button id="delete" value="true" class="btn-outline-danger">Put Back User</button></h4></div>
-                                                                    <?php
-                                                                }
+                                                            if ($response["userdata"][$i]["is_Block"] == 0) {
                                                                 ?>
+                                                                <div class="col-md-6 text-white text-right"><h4><button id="block" value="false" class="btn-outline-warning">Block User</button></h4></div>
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                <div class="col-md-6 text-white text-right"><h4><button id="block" value="true" class="btn-outline-warning">Unblock User</button></h4></div>
+                                                                <?php
+                                                            }
+
+
+                                                            if ($response["userdata"][$i]["is_Deleted"] == 0) {
+                                                                ?>
+                                                                <div class="col-md-6 text-white"><h4><button id="delete" value="false" class="btn-outline-danger">Delete User</button></h4></div>
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                <div class="col-md-6 text-white"><h4><button id="delete" value="true" class="btn-outline-danger">Put Back User</button></h4></div>
+                                                                            <?php
+                                                                        }
+                                                                        ?>
                                                         </div>
 
                                                     </div>
