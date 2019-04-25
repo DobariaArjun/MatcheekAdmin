@@ -147,7 +147,7 @@
                     item ["id"] = data;
                     jsonObj.push(item);
                     $.ajax({
-                        url: 'http://localhost:3000/api/block_unblock',
+                        url: 'https://switlover.herokuapp.com/api/block_unblock',
                         type: 'POST',
                         data: jsonObj[0],
                         complete: function ()
@@ -165,7 +165,7 @@
                     item1 ["id"] = data1;
                     jsonObj1.push(item1);
                     $.ajax({
-                        url: 'http://localhost:3000/api/deleteUserAdmin',
+                        url: 'https://switlover.herokuapp.com/api/deleteUserAdmin',
                         type: 'POST',
                         data: jsonObj1[0],
                         complete: function ()

@@ -32,21 +32,6 @@
                 var table = $('#example').DataTable({
                     "ajax": "data/phoneNumber.txt",
                 });
-                $('#example tbody').on('click', 'button', function () {
-                    var data = table.row($(this).parents('tr')).data();
-                    var dataURL = window.location.href.split("id=")[1];
-                    $.ajax({
-                        url: '',
-                        type: 'POST',
-                        data: {id: dataURL, number: data[2]},
-                        complete: function ()
-                        {
-                            window.location = window.location;
-                        }
-                    });
-
-                    return false;
-                });
             }
             );
         </script>
