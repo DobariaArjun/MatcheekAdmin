@@ -148,7 +148,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -324,7 +324,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -500,7 +500,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -676,7 +676,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -852,7 +852,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -1028,7 +1028,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -1204,7 +1204,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -1380,7 +1380,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -1556,7 +1556,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -1732,7 +1732,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -1908,7 +1908,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -2084,7 +2084,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -2260,7 +2260,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -2436,7 +2436,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -2637,7 +2637,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -2813,7 +2813,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -2989,7 +2989,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -3165,7 +3165,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -3341,7 +3341,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -3517,7 +3517,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
@@ -3693,7 +3693,7 @@
                     }
 
                     $.ajax({
-                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'http://13.59.195.52:3000/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
