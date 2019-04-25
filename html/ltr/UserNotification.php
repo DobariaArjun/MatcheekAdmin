@@ -16,6 +16,11 @@
         <script>
             $(document).ready(function () {
                 var id = window.location.href.split("id=")[1];
+                var one;
+                var two;
+                var three;
+                var four;
+                var five;
                 $("#matcheek_1").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
                     if (matcheek_1 == "On") {
@@ -104,11 +109,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -171,11 +196,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -280,11 +305,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -347,11 +392,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -456,11 +501,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -523,11 +588,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -632,11 +697,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -699,11 +784,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -808,11 +893,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -875,11 +980,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -984,11 +1089,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -1051,11 +1176,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -1160,11 +1285,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -1227,11 +1372,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -1336,11 +1481,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -1403,11 +1568,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -1512,11 +1677,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -1579,11 +1764,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -1688,11 +1873,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -1755,11 +1960,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -1864,11 +2069,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -1931,11 +2156,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -2040,11 +2265,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -2107,11 +2352,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -2216,11 +2461,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -2283,11 +2548,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -2392,11 +2657,31 @@
                     } else {
                         phone_7 = 1;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                   var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -2459,11 +2744,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -2481,11 +2766,6 @@
                     return false;
                 });
                 $("#email_1").click(function () {
-                    var one;
-                    var two;
-                    var three;
-                    var four;
-                    var five;
                     var matcheek_1 = $.trim($('#matcheek_1').text());
                     if (matcheek_1 == "On") {
                         matcheek_1 = 1;
@@ -2769,11 +3049,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -2836,11 +3136,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -2945,11 +3245,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -3012,11 +3332,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -3121,11 +3441,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -3188,11 +3528,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -3297,11 +3637,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -3364,11 +3724,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -3473,11 +3833,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -3540,11 +3920,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
@@ -3649,11 +4029,31 @@
                     } else {
                         phone_7 = 0;
                     }
-                    var email_1 = $.trim($('#email_1').text());
-                    if (email_1 == "On") {
-                        email_1 = 1;
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    if (email_1 == "Every Notification") {
+                        one = 1;
                     } else {
-                        email_1 = 0;
+                        one = 0
+                    }
+                    if (email_1 == "Twice a day") {
+                        two = 1;
+                    } else {
+                        two = 0
+                    }
+                    if (email_1 == "Once a day") {
+                        three = 1;
+                    } else {
+                        three = 0
+                    }
+                    if (email_1 == "Once a week") {
+                        four = 1;
+                    } else {
+                        four = 0
+                    }
+                    if (email_1 == "Once a month") {
+                        five = 1;
+                    } else {
+                        five = 0
                     }
                     var email_2 = $.trim($('#email_2').text());
                     if (email_2 == "On") {
@@ -3716,11 +4116,11 @@
                                 },
                                 email: {
                                     frequency: {
-                                        every_notification: 0,
-                                        twice_a_day: 0,
-                                        once_a_day: 1,
-                                        once_a_week: 0,
-                                        once_a_month: 0
+                                        every_notification: one,
+                                        twice_a_day: two,
+                                        once_a_day: three,
+                                        once_a_week: four,
+                                        once_a_month: five
                                     },
                                     newsletter: email_2,
                                     promotions: email_3,
