@@ -16,11 +16,7 @@
         <script>
             $(document).ready(function () {
                 var id = window.location.href.split("id=")[1];
-                var one;
-                var two;
-                var three;
-                var four;
-                var five;
+
                 $("#matcheek_1").click(function () {
                     var matcheek_1 = $.trim($('#matcheek_1').text());
                     if (matcheek_1 == "On") {
@@ -110,6 +106,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -306,6 +307,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -502,6 +508,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -698,6 +709,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -894,6 +910,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -1090,6 +1111,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -1286,6 +1312,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -1482,6 +1513,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -1678,6 +1714,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -1874,6 +1915,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -2070,6 +2116,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -2266,6 +2317,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -2462,6 +2518,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -2657,7 +2718,12 @@
                     } else {
                         phone_7 = 1;
                     }
-                   var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -2854,6 +2920,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -3050,6 +3121,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -3246,6 +3322,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -3442,6 +3523,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -3638,6 +3724,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -3834,6 +3925,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -4030,6 +4126,11 @@
                         phone_7 = 0;
                     }
                     var email_1 = $.trim($('#dd').children("option:selected").val());
+                    var one;
+                    var two;
+                    var three;
+                    var four;
+                    var five;
                     if (email_1 == "Every Notification") {
                         one = 1;
                     } else {
@@ -4245,7 +4346,7 @@
                                                         <div class="col-md-6 text-white btn-cyan" id="matcheek_1">
                                                             <h4>
                                                                 <?php
-                                                                if ($response1["userdata"][0]["matcheek"]["play_sound_for_every_notification"] == 0) {
+                                                                if ($response1["userdata"][0]["matcheek"]["play_sound_for_every_notification"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4259,7 +4360,7 @@
                                                         <div class="col-md-6 text-white btn-cyan" id="matcheek_2"> 
                                                             <h4>
                                                                 <?php
-                                                                if ($response1["userdata"][0]["matcheek"]["play_sound_for_every_message"] == 0) {
+                                                                if ($response1["userdata"][0]["matcheek"]["play_sound_for_every_message"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4271,7 +4372,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Likes : </h4></div>
                                                         <div class="col-md-6 text-white btn-cyan" id="matcheek_3"> <h4><?php
-                                                                if ($response1["userdata"][0]["matcheek"]["likes"] == 0) {
+                                                                if ($response1["userdata"][0]["matcheek"]["likes"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4281,7 +4382,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Matches : </h4></div>
                                                         <div class="col-md-6 text-white btn-cyan" id="matcheek_4"> <h4><?php
-                                                                if ($response1["userdata"][0]["matcheek"]["matches"] == 0) {
+                                                                if ($response1["userdata"][0]["matcheek"]["matches"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4291,7 +4392,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Messages : </h4></div>
                                                         <div class="col-md-6 text-white btn-cyan" id="matcheek_5"> <h4><?php
-                                                                if ($response1["userdata"][0]["matcheek"]["messages"] == 0) {
+                                                                if ($response1["userdata"][0]["matcheek"]["messages"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4301,7 +4402,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Power of time : </h4></div>
                                                         <div class="col-md-6 text-white btn-cyan" id="matcheek_6"> <h4><?php
-                                                                if ($response1["userdata"][0]["matcheek"]["power_of_time"] == 0) {
+                                                                if ($response1["userdata"][0]["matcheek"]["power_of_time"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4311,7 +4412,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Promotions : </h4></div>
                                                         <div class="col-md-6 text-white btn-cyan" id="matcheek_7"> <h4><?php
-                                                                if ($response1["userdata"][0]["matcheek"]["promotions"] == 0) {
+                                                                if ($response1["userdata"][0]["matcheek"]["promotions"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4330,7 +4431,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"> <h4>Play a sound for each notification received : </h4> </div> 
                                                         <div class="col-md-6 text-white btn-info" id="phone_1"><h4><?php
-                                                                if ($response1["userdata"][0]["phone"]["play_sound_for_every_notification"] == 0) {
+                                                                if ($response1["userdata"][0]["phone"]["play_sound_for_every_notification"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4340,7 +4441,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Play a sound for each message received : </h4></div>
                                                         <div class="col-md-6 text-white btn-info" id="phone_2"> <h4><?php
-                                                                if ($response1["userdata"][0]["phone"]["play_sound_for_every_message"] == 0) {
+                                                                if ($response1["userdata"][0]["phone"]["play_sound_for_every_message"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4350,7 +4451,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Likes : </h4></div>
                                                         <div class="col-md-6 text-white btn-info" id="phone_3"> <h4><?php
-                                                                if ($response1["userdata"][0]["phone"]["likes"] == 0) {
+                                                                if ($response1["userdata"][0]["phone"]["likes"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4360,7 +4461,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Matches : </h4></div>
                                                         <div class="col-md-6 text-white btn-info" id="phone_4"> <h4><?php
-                                                                if ($response1["userdata"][0]["phone"]["matches"] == 0) {
+                                                                if ($response1["userdata"][0]["phone"]["matches"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4370,7 +4471,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Messages : </h4></div>
                                                         <div class="col-md-6 text-white btn-info" id="phone_5"> <h4><?php
-                                                                if ($response1["userdata"][0]["phone"]["messages"] == 0) {
+                                                                if ($response1["userdata"][0]["phone"]["messages"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4380,7 +4481,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Power of time : </h4></div>
                                                         <div class="col-md-6 text-white btn-info" id="phone_6"> <h4><?php
-                                                                if ($response1["userdata"][0]["phone"]["power_of_time"] == 0) {
+                                                                if ($response1["userdata"][0]["phone"]["power_of_time"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4390,7 +4491,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Promotions : </h4></div>
                                                         <div class="col-md-6 text-white btn-info" id="phone_7"> <h4><?php
-                                                                if ($response1["userdata"][0]["phone"]["promotions"] == 0) {
+                                                                if ($response1["userdata"][0]["phone"]["promotions"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4414,11 +4515,11 @@
                                                         <div class="col-md-6 text-white"> <h4>Frequency : </h4> </div> 
                                                         <div class="col-md-3 text-white"> 
                                                             <select class="text-white bg-success btn-outline-light text-center" id="dd">
-                                                                <option value="Every Notification" <?php if ($response1["userdata"][0]["email"]["frequency"]["every_notification"] == 1) { ?>selected<?php } ?>>Every Notification</option>
-                                                                <option value="Twice a day" <?php if ($response1["userdata"][0]["email"]["frequency"]["twice_a_day"] == 1) { ?>selected<?php } ?>>Twice a day</option>
-                                                                <option value="Once a day" <?php if ($response1["userdata"][0]["email"]["frequency"]["once_a_day"] == 1) { ?>selected<?php } ?>>Once a day</option>
-                                                                <option value="Once a week" <?php if ($response1["userdata"][0]["email"]["frequency"]["once_a_week"] == 1) { ?>selected<?php } ?>>Once a week</option>
-                                                                <option value="Once a month" <?php if ($response1["userdata"][0]["email"]["frequency"]["once_a_month"] == 1) { ?>selected<?php } ?>>Once a month</option>
+                                                                <option value="Every Notification" <?php if ($response1["userdata"][0]["email"]["frequency"]["every_notification"] == "1") { ?>selected<?php } ?>>Every Notification</option>
+                                                                <option value="Twice a day" <?php if ($response1["userdata"][0]["email"]["frequency"]["twice_a_day"] == "1") { ?>selected<?php } ?>>Twice a day</option>
+                                                                <option value="Once a day" <?php if ($response1["userdata"][0]["email"]["frequency"]["once_a_day"] == "1") { ?>selected<?php } ?>>Once a day</option>
+                                                                <option value="Once a week" <?php if ($response1["userdata"][0]["email"]["frequency"]["once_a_week"] == "1") { ?>selected<?php } ?>>Once a week</option>
+                                                                <option value="Once a month" <?php if ($response1["userdata"][0]["email"]["frequency"]["once_a_month"] == "1") { ?>selected<?php } ?>>Once a month</option>
                                                             </select>
                                                         </div>
                                                         <div class="col-md-3 text-white btn-success" id="email_1"> <h4>Change</h4></div>
@@ -4426,7 +4527,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Newsletters : </h4></div>
                                                         <div class="col-md-6 text-white btn-success" id="email_2"> <h4><?php
-                                                                if ($response1["userdata"][0]["email"]["newsletter"] == 0) {
+                                                                if ($response1["userdata"][0]["email"]["newsletter"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4436,7 +4537,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Promotions : </h4></div>
                                                         <div class="col-md-6 text-white btn-success" id="email_3"> <h4><?php
-                                                                if ($response1["userdata"][0]["email"]["promotions"] == 0) {
+                                                                if ($response1["userdata"][0]["email"]["promotions"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4446,7 +4547,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Likes : </h4></div>
                                                         <div class="col-md-6 text-white btn-success" id="email_4"> <h4><?php
-                                                                if ($response1["userdata"][0]["email"]["likes"] == 0) {
+                                                                if ($response1["userdata"][0]["email"]["likes"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4456,7 +4557,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Matches : </h4></div>
                                                         <div class="col-md-6 text-white btn-success" id="email_5"> <h4><?php
-                                                                if ($response1["userdata"][0]["email"]["matches"] == 0) {
+                                                                if ($response1["userdata"][0]["email"]["matches"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4466,7 +4567,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Messages : </h4></div>
                                                         <div class="col-md-6 text-white btn-success" id="email_6"> <h4><?php
-                                                                if ($response1["userdata"][0]["email"]["messages"] == 0) {
+                                                                if ($response1["userdata"][0]["email"]["messages"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
@@ -4476,7 +4577,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6 text-white"><h4>Power of time : </h4></div>
                                                         <div class="col-md-6 text-white btn-success" id="email_7"> <h4><?php
-                                                                if ($response1["userdata"][0]["email"]["power_of_time"] == 0) {
+                                                                if ($response1["userdata"][0]["email"]["power_of_time"] == "0") {
                                                                     echo "Off";
                                                                 } else {
                                                                     echo "On";
