@@ -349,7 +349,7 @@
                         email_7 = 0;
                     }
                     $.ajax({
-                        url: 'http://localhost:3000/api/SetNotificationadmin',
+                        url: 'https://https://switlover.herokuapp.com/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
