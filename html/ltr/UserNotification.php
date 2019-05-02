@@ -151,54 +151,6 @@
                 var four;
                 var five;
 
-//                $("#matcheek_1").click(function () {
-//                    if ($("#matcheek_1").is(":checked")) {
-//                        $("#m1").text("On");
-//                    } else if ($("#matcheek_1").is(":not(:checked)")) {
-//                        $("#m1").html("Off");
-//                    }
-//                });
-//                $("#matcheek_2").click(function () {
-//                });
-//                $("#matcheek_3").click(function () {
-//                });
-//                $("#matcheek_4").click(function () {
-//                });
-//                $("#matcheek_5").click(function () {
-//                });
-//                $("#matcheek_6").click(function () {
-//                });
-//                $("#matcheek_7").click(function () {
-//                });
-//                
-//                $("#phone_1").click(function () {
-//                });
-//                $("#phone_2").click(function () {
-//                });
-//                $("#phone_3").click(function () {
-//                });
-//                $("#phone_4").click(function () {
-//                });
-//                $("#phone_5").click(function () {
-//                });
-//                $("#phone_6").click(function () {
-//                });
-//                $("#phone_7").click(function () {
-//                });
-//                
-//                $("#email_2").click(function () {
-//                });
-//                $("#email_3").click(function () {
-//                });
-//                $("#email_4").click(function () {
-//                });
-//                $("#email_5").click(function () {
-//                });
-//                $("#email_6").click(function () {
-//                });
-//                $("#email_7").click(function () {
-//                });
-
                 $("#change").click(function () {
                     if ($("#matcheek_1").is(":checked")) {
                         matcheek_1 = 1;
@@ -349,7 +301,7 @@
                         email_7 = 0;
                     }
                     $.ajax({
-                        url: 'https://https://switlover.herokuapp.com/api/SetNotificationadmin',
+                        url: 'https://switlover.herokuapp.com/api/SetNotificationadmin',
                         type: 'POST',
                         data: {data: {userID: id,
                                 matcheek: {
