@@ -37,7 +37,7 @@
                     var data = table.row($(this).parents('tr')).data();
                     var dataURL = window.location.href.split("id=")[1];
                     $.ajax({
-                        url: 'http://13.59.195.52:3000/api/blockNumber',
+                        url: 'https://switlover.herokuapp.com/api/blockNumber',
                         type: 'POST',
                         data: {id: dataURL, number: data[2]},
                         complete: function ()
